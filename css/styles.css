@@ -6,6 +6,7 @@ Main Color: #D62C3B
 Link Color: #D64F5A
 */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -156,7 +157,6 @@ section h3:after {
 }
 
 .text-box {
-
     position: absolute;
     width: 1140px;
     top: 50%;
