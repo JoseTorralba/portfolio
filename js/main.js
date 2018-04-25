@@ -21,6 +21,16 @@ $(document).ready(function() {
 });
 
 
+// Animated Scroll Back to top of page for Resume
+$('#top-page').click(function () {
+
+    $('html, body').animate({
+        scrollTop: $('#header').offset().top
+    }, 1000);
+});
+
+
+
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything

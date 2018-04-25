@@ -2,8 +2,8 @@
 ------------------------- */
 
 /*
-Main Color: #D62C3B
-Link Color: #D64F5A
+Main Color Lime Green: #CFEC3A
+
 */
 
 
@@ -23,13 +23,43 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-
-/* Reusable Styles
-------------------------- */
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
+
+/* Main Navigation
+------------------------- */
+#mainNav {
+    background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.navbar-brand:hover {
+    color: #B296E0;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+}
+
+.nav-link:hover {
+    color: #B296E0;
+}
+
+
+/* Reusable Styles
+------------------------- */
+
 
 section { 
     padding: 80px 0;
@@ -59,20 +89,21 @@ section {
     font-size: 70%;
     text-transform: uppercase;
     border: 2px #fff solid;
-    border-color: #D62C3B;
+    border-color: #000;
     display: inline-block;
-    background-color: #000;
-    color: #fff;
+    color: #000;
     width: auto;
     height: auto;
     padding: 1em 3em;
     font-weight: 100;
-    transition: color 0.3s;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
 .section-btn:hover {
     text-decoration: none;
-    color: #D62C3B;
+    border-color: #CFEC3A;
+    background-color: #000;
+    color: #CFEC3A;
 }
 
 
@@ -85,7 +116,7 @@ h1, h2 {
 }
 
 h2 {
-    font-size: 300%;
+    font-size: 250%;
     font-weight: 100;
     text-align: center;
     text-transform: uppercase;
@@ -95,9 +126,9 @@ h2 {
 section h2:after {
     display: block;
     height: 2px;
-    background-color: #D62C3B;
+    background-color: #987BC6;
     content: " ";
-    width: 310px;
+    width: 150px;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -106,7 +137,7 @@ section h2:after {
 section h3:after {
     display: block;
     height: 2px;
-    background-color: #D62C3B;
+    background-color: #987BC6;
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -115,38 +146,10 @@ section h3:after {
 }
 
 
-
-/* Main Navigation
-------------------------- */
-#mainNav {
-    background-color: rgba(0, 0, 0, 1) !important;
-}
-
-.navbar-brand {
-    color: #fff;
-    transition: color 0.5s;
-}
-
-.navbar-brand:hover {
-    color: #D64F5A;
-}
-
-.nav-link {
-    color: #fff;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: color 0.5s;
-}
-
-.nav-link:hover {
-    color: #D64F5A;
-}
-
 /* Front Page Section
 ------------------------- */
 
-.front-page {
+header {
     background-image: url(../img/w3-swamp.jpg), linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 100%);
     background-blend-mode: multiply;
     background-attachment: fixed;
@@ -175,10 +178,10 @@ section h3:after {
 }
 
 .text-box h2 {
-    font-size: 200%;
+    font-size: 160%;
     font-weight: 100;
     text-align: center;
-    color: #fff;
+    color: #CFEC3A;
     word-spacing: 5px;
     margin-top: 0.5em;
 }
@@ -190,18 +193,21 @@ section h3:after {
     font-size: 80%;
     text-transform: uppercase;
     border: 1px #fff solid;
+    border-radius: 200px;
     display: inline-block;
     color: #fff;
     width: auto;
     height: auto;
     padding: 1em 3em;
     font-weight: 100;
-    transition: color 0.3s;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
 .front-btn:hover {
     text-decoration: none;
-    color: #D62C3B;
+    background-color: #000;
+    border-color: #CFEC3A;
+    color: #CFEC3A;
 }
 
 
@@ -210,19 +216,33 @@ section h3:after {
 
 .work-section p, h3{
     text-align: center;
+    font-size: 130%;
+    font-weight: 100;
 }
 
 .work-section p {
     font-size: 90%;
+    margin-top: 1em;
 
 }
 
 .work-row {
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
+.work-section img {
+    transition: transform 0.3s, opacity 0.4s;
+}
+
+.work-section img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+
 .work-section .section-btn {
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 
@@ -232,9 +252,6 @@ section h3:after {
     font-size: 300%;
     margin-bottom: 0.5em;
 }
- 
-
-
 
 
 /* About Section
@@ -242,15 +259,20 @@ section h3:after {
 
 
 .about-section {
-    background-color: #f8f8f8;
+    background-image: url(../img/coral-highlands.jpeg), linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 100%);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
 }
-
 
 
 .about-section h2:after {
     display: block;
     height: 2px;
-    background-color: #D62C3B;
+    background-color: #987BC6;
     content: " ";
     width: 200px;
     margin-top: 15px;
@@ -261,11 +283,26 @@ section h3:after {
     margin-bottom: 2em;
 }
 
-
-
 .about-btn .section-btn {
     margin-top: 3em;
     margin-right: 1em;
+    text-transform: uppercase;
+    border: 1px #fff solid;
+    border-radius: 200px;
+    display: inline-block;
+    color: #fff;
+    width: auto;
+    height: auto;
+    padding: 1em 3em;
+    font-weight: 100;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.about-btn .section-btn:hover {
+    text-decoration: none;
+    background-color: #000;
+    border-color: #CFEC3A;
+    color: #CFEC3A;
 }
 
 
@@ -274,16 +311,13 @@ img {
 }
 
 
-
-
-
 /* Skills Section
 ------------------------- */
 
 .skills-section h2:after {
     display: block;
     height: 2px;
-    background-color: #D62C3B;
+    background-color: #987BC6;
     content: " ";
     width: 200px;
     margin-top: 15px;
@@ -317,7 +351,13 @@ i {
 ------------------------- */
 
 .contact-section {
-    background-color: #fff2f3; 
+    background-image: url(../img/wildspire-waste.jpeg), linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 100%);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
 }
 
 .contact-section .sub-text {
@@ -346,6 +386,12 @@ textarea { height: 100px; }
 
 .submit-msg {
     width: 15%;
+    transition: transform 0.3s;
+}
+
+.submit-msg:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 
@@ -397,7 +443,7 @@ footer p {
 }
 
 footer a {
-    color: #D64F5A;
+    color: #CFEC3A;
     transition: color 0.5s;
 }
 
@@ -405,23 +451,4 @@ footer a:hover {
     color: #fff;
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
