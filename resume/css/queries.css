@@ -19,13 +19,7 @@
         font-size: 18px;
     }
 
-    .text-box h1 {
-        font-size: 400%;
-    }
 
-    .text-box h2 {
-        font-size: 180%;
-    }
 
     .work-section h3 {
         font-size: 150%;
@@ -65,6 +59,17 @@
 /* Small Phones from 0px - 480px */
 
 @media only screen and (max-width: 480px) {
+
+    /* Text-Right causing issues, fix later */
+    .header h1:after {
+        display: block;
+        height: 2px;
+        background-color: #98af21;
+        content: " ";
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
 
     .text-box h1 {
         font-size: 200%;
