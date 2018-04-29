@@ -3,9 +3,8 @@
 
 /*
 Main Color Lime Green: #CFEC3A
-
+After Header Color : #98af21
 */
-
 
 * {
     margin: 0;
@@ -41,7 +40,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: #B296E0;
+    color: #CFEC3A;
 }
 
 .nav-link {
@@ -126,7 +125,7 @@ h2 {
 section h2:after {
     display: block;
     height: 2px;
-    background-color: #987BC6;
+    background-color: #98af21;
     content: " ";
     width: 150px;
     margin: 0 auto;
@@ -137,7 +136,7 @@ section h2:after {
 section h3:after {
     display: block;
     height: 2px;
-    background-color: #987BC6;
+    background-color: #98af21;
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -237,7 +236,7 @@ header {
 .work-section img:hover {
     cursor: pointer;
     opacity: 0.7;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
@@ -272,19 +271,19 @@ header {
 .about-section h2:after {
     display: block;
     height: 2px;
-    background-color: #987BC6;
+    background-color: #CFEC3A;
     content: " ";
-    width: 200px;
+    width: 350px;
     margin-top: 15px;
 }
 
 .about-section .sub-text {
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .about-btn .section-btn {
-    margin-top: 3em;
+    margin-top: 2.4em;
     margin-right: 1em;
     text-transform: uppercase;
     border: 1px #fff solid;
@@ -317,7 +316,7 @@ img {
 .skills-section h2:after {
     display: block;
     height: 2px;
-    background-color: #987BC6;
+    background-color: #98af21;
     content: " ";
     width: 200px;
     margin-top: 15px;
