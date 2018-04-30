@@ -89,6 +89,7 @@ section p {
 /* Reused Styles
 ------------------------- */
 h2 {
+    text-transform: uppercase;
     font-size: 150%;
     font-family: 'Barlow Semi Condensed', sans-serif !important;
 }
