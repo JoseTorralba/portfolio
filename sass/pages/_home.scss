@@ -23,6 +23,10 @@ section {
     background-attachment: fixed;
     background-size: cover;
     background-position: top;
+
+    @include respond(tablet-portrait) {
+        background-attachment: scroll;
+    }
 }
 
 // Project Section Styles

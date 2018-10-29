@@ -195,6 +195,9 @@ body {
   .project-box__text {
     font-size: 1.4rem;
     padding: 2.5rem; }
+    @media only screen and (max-width: 25.875em) {
+      .project-box__text {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 56.25em) {
     .project-box {
       margin-bottom: 4rem; } }
@@ -342,6 +345,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      background-attachment: scroll; } }
   .header__text-box {
     position: absolute;
     top: 45%;
@@ -451,6 +457,9 @@ section {
   background-attachment: fixed;
   background-size: cover;
   background-position: top; }
+  @media only screen and (max-width: 56.25em) {
+    .about-section {
+      background-attachment: scroll; } }
 
 .project-section {
   padding: 6rem 0 20rem;

@@ -70,6 +70,10 @@
     &__text {
         font-size: 1.4rem;
         padding: 2.5rem;
+
+        @include respond(smaller-phone) {
+            font-size: 1.6rem;
+        }
     }
 
     @include respond(tablet-portrait) {
