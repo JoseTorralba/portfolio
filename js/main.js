@@ -1,69 +1,64 @@
-/* Fade Animation */
-$(document).ready(function() {
-  $(".animsition").animsition({
-    inClass: 'fade-in',
-    outClass: 'fade-out',
-    inDuration: 1500,
-    outDuration: 800,
-    linkElement: '.animsition-link',
-    loading: true,
-    loadingParentElement: 'body',
-    loadingClass: 'animsition-loading',
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: [ 'animation-duration', '-webkit-animation-duration'],
-    overlay : false,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body',
-    transition: function(url){ window.location.href = url; }
-  });
-});
+$(document).ready(function () {
+  // Scroll animation
+  $("a.scroll").click(function (event) {
+    event.preventDefault();
 
-
-// Animated Scroll Back to top of page for Resume
-$('#top-page').click(function () {
-
-    $('html, body').animate({
-        scrollTop: $('#header').offset().top
+    $("html, body").animate({ 
+      scrollTop: $($(this).attr("href")).offset().top
     }, 1000);
-});
+  });
 
+  // Background Icon Navbar Toggle
+  $('.navigation__toggle--icon').click(function() {
+    $('.navigation__nav').toggleClass('navigation__active-nav');
+  });
 
+  // List items shows up when Icon is toggled
+  $('.navigation__toggle--icon').click(function() {
+    $('.navigation__list').toggleClass('navigation__active-list');
+  });
 
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
+  // When a list item is clicked, nav menu is hidden
+  // find a way to make it toggle icons
+  $('.navigation__item').click(function() {
+    $('.navigation__nav').toggleClass('navigation__active-nav');
+  });
+  
+  // Prevents opacity when clicking on a nav link
+  $('.navigation__item').click(function() {
+    $('.navigation__list').toggleClass('navigation__active-list');
+  });
+
+    
+  // Navigation
+  $('.navigation__toggle--icon').click(function() {
+
+    var toggleIcon = $('.navigation__toggle--icon');
+
+    if (toggleIcon.hasClass('fas fa-bars')) {
+
+        toggleIcon.attr("class", "fas fa-times navigation__toggle--icon");
+        toggleIcon.removeAttr("fas fa-bars");
+        
+    } else {
+        toggleIcon.attr("class", "fas fa-bars navigation__toggle--icon");
+        toggleIcon.removeAttr('fas fa-times');
     }
   });
+  
+  $('.navigation__item').click(function() {
+
+    var toggleIconItem = $('.navigation__toggle--icon');
+
+    if (toggleIconItem.hasClass('fas fa-bars')) {
+
+      toggleIconItem.attr("class", "fas fa-times navigation__toggle--icon");
+      toggleIconItem.removeAttr("fas fa-bars");
+      
+    } else {
+        toggleIconItem.attr("class", "fas fa-bars navigation__toggle--icon");
+        toggleIconItem.removeAttr('fas fa-times');
+    }
+
+  });
+});

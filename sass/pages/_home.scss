@@ -1,0 +1,32 @@
+// Section Default Styles
+section {
+    padding: 6rem 0;
+    background-color: $color-white;
+}
+
+// Feature Section Styles
+.feature-section {
+    padding: 6rem 0 16rem;
+
+    @include respond(tablet-portrait) {
+        padding: 6rem 0 14rem;
+    }
+}
+// About Section Styles
+.about-section {
+    color: $color-white;
+    background-image: linear-gradient(
+        to bottom,
+        rgba($color-black, 0.2),
+        rgba($color-black, 1)),
+    url(../img/nyc-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+}
+
+// Project Section Styles
+.project-section {
+    padding: 6rem 0 20rem;
+    background-color: #f4f4f4;
+}

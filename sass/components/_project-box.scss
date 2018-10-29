@@ -1,0 +1,78 @@
+// Project Box
+.project-box {
+    background-color: rgba($color-white, .8);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    border-radius: 3px;
+    text-align: center;
+    transition: all .3s;
+
+    &:hover {
+        transform: translateY(-1.5rem);
+    }
+
+    // Project Box Heading
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: $color-black;
+        padding: 2rem;
+
+        &::after {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            height: 2px;
+            background-color: $primary-color;
+            content: " ";
+            width: 70px;
+        }
+    }
+
+    // Project Box Img
+    &__img {
+        height: 20rem;
+        background-size: cover;
+        background-position: center;
+
+
+        &--1 {
+            background-image: url(../img/omnifood.jpg);
+
+            &:hover {
+                // color: green;
+                // opacity: .8;
+                // background-image: linear-gradient(
+                //     to bottom,
+                //     rgba($primary-color-light, .2),
+                //     rgba($color-black, 1)),
+                //     url(../img/omnifood.jpg);
+            }
+        }
+
+        &--2 {
+
+        }
+
+        &--3 {
+            
+        }
+
+        @include respond(tablet-portrait) {
+            height: 30rem;;
+        }
+
+        @include respond(older-phone) {
+            height: 18rem;
+        }
+    }
+
+    // Project Box Text
+    &__text {
+        font-size: 1.4rem;
+        padding: 2.5rem;
+    }
+
+    @include respond(tablet-portrait) {
+        margin-bottom: 4rem;
+    }
+}

@@ -1,0 +1,34 @@
+// BUTTON STYLES
+.btn {
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        display: inline-block;
+        border-radius: 5rem;
+    }
+
+    &--black {
+        color: $color-white;
+        background-color: $color-black;
+        border: 1px solid $color-white;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $primary-color-dark;
+        }
+    }
+
+    &--maroon {
+        color: $color-white;
+        background-color: $primary-color-dark;
+        border: 1px solid $color-white;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}
