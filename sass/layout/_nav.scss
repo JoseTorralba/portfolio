@@ -110,6 +110,13 @@
             display: inline-block;
             transition: all .2s;
 
+            @include respond(tablet-portrait) {
+                &:hover {
+                    color: none;
+                    transform: none;
+                }
+            }
+
             &:hover {
                 color: $primary-color-text;
                 transform: translateY(-.1rem);
