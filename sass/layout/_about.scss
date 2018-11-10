@@ -5,13 +5,13 @@
     // About Img
     &__img {
         // padding-top: 4rem;
-        border: 1.5rem solid $color-white;
+        border: 1rem solid $color-white;
         display: block;
         margin: 0 auto;
         width: 18%;
         border-radius: 50rem;
         transition: all .3s;
-        // filter: blur(1.5rem);
+        filter: brightness(120%);
         // &::before {
         //     padding-top: 30rem;
         // }
@@ -22,10 +22,6 @@
 
         @include respond(phone) {
             width: 50%;
-        }
-
-        &:hover {
-            // filter: blur(3px) brightness(80%);
         }
     }
 

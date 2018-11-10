@@ -11,7 +11,7 @@
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         border-radius: 3px;
         padding: 5rem;
-        margin-top: -10rem;
+        margin-top: -15rem;
         margin-bottom: 3rem;
         
         @include respond(smaller-phone) {
@@ -76,12 +76,12 @@
         }
 
         &-link {
-            color: $primary-color-light;
+            color: $primary-color-text;
             text-decoration: none;
             transition: all .3s;
 
             &:hover {
-                color: $color-white;
+                color: $primary-color-light;
             }
         }
     }

@@ -6,13 +6,13 @@
 
     background-image: linear-gradient(
         to bottom,
-        rgba($color-black, .2),
-        rgba($color-black, 1)),
-    url(../img/times-square-bg.jpg);
+        rgba($color-black, .8),
+        rgba($color-black, .9)),
+    url(../img/code-bg.jpg);
 
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 
     @include respond(tablet-portrait) {
         background-attachment: scroll;
@@ -21,7 +21,7 @@
     // Header Text Box
     &__text-box {
         position: absolute;
-        top: 45%;
+        top: 46%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
