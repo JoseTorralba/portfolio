@@ -447,6 +447,9 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   color: #e4c3ee; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__link:hover, .navigation__link:active {
+      color: none; } }
 
 .navigation__toggle {
   z-index: 1500;
@@ -469,13 +472,13 @@ body {
     font-size: 3.5rem;
     display: inline-block;
     transition: all .2s; }
-    @media only screen and (max-width: 56.25em) {
-      .navigation__toggle--icon:hover {
-        color: none;
-        transform: none; } }
     .navigation__toggle--icon:hover {
       color: #e4c3ee;
       transform: translateY(-0.1rem); }
+      @media only screen and (max-width: 56.25em) {
+        .navigation__toggle--icon:hover {
+          color: none;
+          transform: none; } }
 
 .navigation__active-nav {
   left: 0;

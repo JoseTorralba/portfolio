@@ -82,6 +82,10 @@
         &:hover,
         &:active {
             color: $primary-color-text;
+
+            @include respond(tablet-portrait) {
+                color: none;
+            }
         }
     }
 
@@ -110,16 +114,16 @@
             display: inline-block;
             transition: all .2s;
 
-            @include respond(tablet-portrait) {
-                &:hover {
-                    color: none;
-                    transform: none;
-                }
-            }
+
 
             &:hover {
                 color: $primary-color-text;
                 transform: translateY(-.1rem);
+
+                @include respond(tablet-portrait) {
+                    color: none;
+                    transform: none;
+                }
             }
         }
     }
