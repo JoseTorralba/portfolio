@@ -54,7 +54,7 @@
     &__icon {
         color: $color-white;
         background-image: linear-gradient(
-            to bottom,
+            to bottom right,
         rgba($primary-color-light, 0.9),
         rgba($primary-color-dark, 1));
         border-radius: 5rem;
@@ -64,10 +64,9 @@
 
         &:hover {
             color: $color-white;
-            background-image: none;
             background-color: $primary-color-light;
             padding: 1.5rem;
-            transform: scale(1.1) rotate(360deg);
+            transform: scale(1.1) ;
         }
     }
 
