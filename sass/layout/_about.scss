@@ -4,14 +4,13 @@
 
     // About Img
     &__img {
-        // padding-top: 4rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         border: 1rem solid $color-white;
         display: block;
         margin: 0 auto;
         width: 18%;
         border-radius: 50rem;
         transition: all .3s;
-        filter: brightness(120%);
         // &::before {
         //     padding-top: 30rem;
         // }

@@ -34,38 +34,40 @@
         background-size: cover;
         background-position: center;
 
-        &--1 {
-            background-image: url(../img/natours.jpg);
-
-                // &:hover {
-                    // color: green;
-                    // opacity: .8;
-                    // background-image: linear-gradient(
-                    //     to bottom,
-                    //     rgba($primary-color-light, .2),
-                    //     rgba($color-black, 1)),
-                    //     url(../img/omnifood.jpg);
-            // }
+        &--kh3Countdown {
+            background-image: url(../img/kh3-countdown.png);
         }
 
-        &--2 {
-            background-image: url(../img/bookoff.jpg);
+        &--bookoff {
+            background-image: url(../img/bookoff.png);
         }
 
-        &--3 {
-            background-image: url(../img/pokemon-api.jpg);
+        &--poke-api {
+            background-image: url(../img/pokemon-api.png);
         }
 
-        &--4 {
-            background-image: url(../img/giphy-api.jpg);
+        &--natours {
+            background-image: url(../img/natours.png);
         }
 
-        &--5 {
-            background-image: url(../img/omnifood.jpg);
+        &--giphy-api {
+            background-image: url(../img/giphy-api.png);
+        }
+
+        &--omnifood {
+            background-image: url(../img/omnifood.png);
         }
         
-        &--6 {
-            background-image: url(../img/trillo.jpg);
+        &--trillo {
+            background-image: url(../img/trillo.png);
+        }
+
+        &--jp-soundboard {
+            background-image: url(../img/jp-soundboard.png);
+        }
+
+        &--petfinder-api {
+            background-image: url(../img/petfinder-api.png);
         }
 
         @include respond(tablet-portrait) {
