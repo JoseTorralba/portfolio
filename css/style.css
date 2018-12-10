@@ -234,9 +234,12 @@ body {
     @media only screen and (max-width: 56.25em) {
       .project-box__img {
         height: 30rem; } }
+    @media only screen and (max-width: 25.875em) {
+      .project-box__img {
+        height: 23rem; } }
     @media only screen and (max-width: 20em) {
       .project-box__img {
-        height: 18rem; } }
+        height: 16rem; } }
   .project-box__text {
     font-size: 1.4rem;
     padding: 2.5rem; }
@@ -302,7 +305,7 @@ body {
         padding: 6rem 1.8rem; } }
     .footer__form-box__text {
       color: #000;
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding-bottom: .8rem;
       line-height: 1.8; }
       @media only screen and (max-width: 25.875em) {

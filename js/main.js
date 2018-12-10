@@ -37,12 +37,12 @@ $(document).ready(function () {
 
     if (toggleIcon.hasClass('fas fa-bars')) {
 
-        toggleIcon.attr("class", "fas fa-times navigation__toggle--icon");
-        toggleIcon.removeAttr("fas fa-bars");
+      toggleIcon.attr("class", "fas fa-times navigation__toggle--icon");
+      toggleIcon.removeAttr("fas fa-bars");
         
     } else {
-        toggleIcon.attr("class", "fas fa-bars navigation__toggle--icon");
-        toggleIcon.removeAttr('fas fa-times');
+      toggleIcon.attr("class", "fas fa-bars navigation__toggle--icon");
+      toggleIcon.removeAttr('fas fa-times');
     }
   });
   
@@ -56,9 +56,19 @@ $(document).ready(function () {
       toggleIconItem.removeAttr("fas fa-bars");
       
     } else {
-        toggleIconItem.attr("class", "fas fa-bars navigation__toggle--icon");
-        toggleIconItem.removeAttr('fas fa-times');
+      toggleIconItem.attr("class", "fas fa-bars navigation__toggle--icon");
+      toggleIconItem.removeAttr('fas fa-times');
     }
 
+  });
+
+  // About Background Image On Scroll
+  $(window).scroll(function() {
+
+    const scrollPosition = $(window).scrollTop()/2;
+
+    $('.about-section').css({
+      'background-position-x' : + scrollPosition + 'px'
+    });
   });
 });

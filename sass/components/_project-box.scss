@@ -17,6 +17,7 @@
         color: $color-black;
         padding: 2rem;
 
+
         &::after {
             display: block;
             margin: 0 auto;
@@ -71,11 +72,16 @@
         }
 
         @include respond(tablet-portrait) {
-            height: 30rem;;
+            height: 30rem;
+
+        }
+
+        @include respond(smaller-phone) {
+            height: 23rem;
         }
 
         @include respond(older-phone) {
-            height: 18rem;
+            height: 16rem;
         }
     }
 
