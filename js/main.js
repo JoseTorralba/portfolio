@@ -28,8 +28,7 @@ $(document).ready(function () {
   $('.navigation__item').click(function() {
     $('.navigation__list').toggleClass('navigation__active-list');
   });
-
-    
+ 
   // Navigation
   $('.navigation__toggle--icon').click(function() {
 

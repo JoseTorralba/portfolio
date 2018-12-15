@@ -303,9 +303,30 @@ body {
     @media only screen and (max-width: 25.875em) {
       .footer__form-box {
         padding: 6rem 1.8rem; } }
+    .footer__form-box__heading {
+      font-size: 3.5rem;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: #000;
+      margin-bottom: 4rem; }
+      .footer__form-box__heading::after {
+        display: block;
+        margin: 0 auto;
+        margin-top: 1rem;
+        height: 2px;
+        background-color: #bb65d4;
+        content: " ";
+        width: 125px; }
+      @media only screen and (max-width: 25.875em) {
+        .footer__form-box__heading {
+          font-size: 3rem;
+          letter-spacing: 0; } }
+      @media only screen and (max-width: 20em) {
+        .footer__form-box__heading {
+          font-size: 2.2rem; } }
     .footer__form-box__text {
       color: #000;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       padding-bottom: .8rem;
       line-height: 1.8; }
       @media only screen and (max-width: 25.875em) {
