@@ -61,7 +61,8 @@ body {
     font-size: 9rem;
     font-weight: 500;
     letter-spacing: 2px;
-    padding-bottom: .5rem; }
+    padding-bottom: .5rem;
+    text-shadow: 0px 5px 10px #000; }
     @media only screen and (max-width: 37.5em) {
       .primary-heading--main {
         font-size: 6.8rem; } }
@@ -72,6 +73,7 @@ body {
       .primary-heading--main {
         font-size: 3rem; } }
   .primary-heading--sub {
+    text-shadow: 0px 5px 10px #000;
     color: #e4c3ee;
     display: block;
     font-size: 3rem;
@@ -215,16 +217,12 @@ body {
     height: 20rem;
     background-size: cover;
     background-position: center; }
-    .project-box__img--kh3Countdown {
-      background-image: url(../img/kh3-countdown.png); }
+    .project-box__img--carriercrumbs {
+      background-image: url(../img/carriercrumbs.png); }
     .project-box__img--poke-api {
       background-image: url(../img/pokemon-api.png); }
-    .project-box__img--natours {
-      background-image: url(../img/natours.png); }
     .project-box__img--giphy-api {
       background-image: url(../img/giphy-api.png); }
-    .project-box__img--omnifood {
-      background-image: url(../img/omnifood.png); }
     .project-box__img--pig {
       background-image: url(../img/pig-game.png); }
     .project-box__img--trillo {
@@ -299,7 +297,7 @@ body {
     background-color: #fff;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     border-radius: 3px;
-    padding: 5rem;
+    padding: 5rem 0;
     margin-top: -15rem;
     margin-bottom: 3rem; }
     @media only screen and (max-width: 25.875em) {
@@ -413,10 +411,10 @@ body {
 .header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../img/code-bg.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/header-bg.jpg);
   background-attachment: fixed;
   background-size: cover;
-  background-position: top; }
+  background-position: bottom; }
   @media only screen and (max-width: 56.25em) {
     .header {
       background-attachment: scroll; } }
@@ -523,6 +521,11 @@ body {
         .navigation__toggle--icon:hover {
           color: none;
           transform: none; } }
+
+.navigation__active {
+  z-index: 1000;
+  left: 0;
+  display: block; }
 
 .navigation__active-nav {
   left: 0;

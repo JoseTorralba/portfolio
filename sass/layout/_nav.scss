@@ -129,6 +129,12 @@
         }
     }
 
+    &__active {
+        z-index: 1000;
+        left: 0;
+        display: block;
+    }
+
     // When Active for Nav, List
     &__active-nav {
         left: 0;

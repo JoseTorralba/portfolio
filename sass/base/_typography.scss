@@ -18,6 +18,7 @@ body {
         font-weight: 500;
         letter-spacing: 2px;
         padding-bottom: .5rem;
+        text-shadow: 0px 5px 10px #000;
 
         @include respond(phone) {
             font-size: 6.8rem;
@@ -33,6 +34,7 @@ body {
     }
 
     &--sub {
+        text-shadow: 0px 5px 10px #000;
         color: $primary-color-text;
         display: block;
         font-size: 3rem;
