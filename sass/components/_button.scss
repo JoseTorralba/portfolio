@@ -2,19 +2,22 @@
 .btn {
     &:link,
     &:visited {
+        display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
-        display: inline-block;
     }
 
     &--main {
+        animation-name: moveInUp;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        color: $color-white;
+        border: none;
+        border-bottom: 1px solid $primary-color-light;
         font-size: 1.7rem;
         margin-top: 3rem;
         padding-top: 1.3rem;
         padding-bottom: 1.3rem;
-        color: $color-white;
-        border: none;
-        border-bottom: 1px solid $primary-color-light;
         transition: all .3s;
 
         &:hover {
@@ -25,47 +28,49 @@
     }
 
     &--purple {
-        font-size: 1.5rem;
-        padding: 1rem 2rem;
-        color: $color-white;
-        // background-color: $primary-color;
-        background-image: linear-gradient(
-            to bottom right,
-        rgba($primary-color-light, 0.8),
-        rgba($primary-color-dark, 1));
-
         border-radius: 5rem;
-        transition: all .3s;
-
-        &:hover {
-            background-color: $primary-color-dark;
-        }
-    }
-    &--purple-dark {
-        font-size: 1.7rem;
-        color: $primary-color;
-        border: none;
+        color: $color-black;
+        font-size: 1.5rem;
+        // padding: 1rem 2rem;
         transition: all .3s;
 
         &::after {
+            background-color: $primary-color-light;
+            content: "";
+            display: block;
+            margin: 0 auto;
+            margin-top: .4rem;
+            height: 1.4px;
+            width: 6rem;
+            transition: all .3s;
+        }
+
+        &:hover {
+            // background-color: $primary-color-dark;
+            &::after {
+                width: 10rem;
+            }
+        }
+    }
+    &--purple-dark {
+        border: none;
+        color: $primary-color;
+        font-size: 1.7rem;
+        transition: all .3s;
+
+        &::after {
+            background-color: $primary-color-light;
+            content: "";
             display: block;
             margin: 0 auto;
             margin-top: .8rem;
             height: 1.3px;
-            background-color: $primary-color-light;
-            content: " ";
             width: 10rem;
             transition: all .3s;
         }
 
         &:hover {
             &::after {
-                display: block;
-                margin: 0 auto;
-                margin-top: .8rem;
-                height: 1.3px;
-                background-color: $primary-color-light;
-                content: " ";
                 width: 18rem;
             }
         }

@@ -1,13 +1,16 @@
 body {
+    color: $color-grey;
     font-family: 'Varela', sans-serif;
     font-weight: 100;
-    text-rendering: optimizeLegibility;
     line-height: 1.5;
-    color: $color-grey;
+    text-rendering: optimizeLegibility;
 }
 
 // Primary Heading
 .primary-heading {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     text-transform: uppercase;
     width: 100%;
 
@@ -34,12 +37,12 @@ body {
     }
 
     &--sub {
-        text-shadow: 0px 5px 10px #000;
         color: $primary-color-text;
         display: block;
         font-size: 3rem;
         font-weight: 300;
         letter-spacing: 2px;
+        text-shadow: 0px 5px 10px #000;
 
         @include respond(phone) {
             font-size: 2.5rem;
@@ -59,26 +62,36 @@ body {
 
 // Secondary Heading
 .secondary-heading {
+    color: $color-black;
     font-size: 3.5rem;
     font-weight: 200;
-    text-transform: uppercase;
-    color: $color-black;
     margin-bottom: 4rem;
+    text-transform: uppercase;
 
     &::after {
+        background-color: $primary-color;
+        content: " ";
         display: block;
         margin: 0 auto;
         margin-top: 1rem;
         height: 2px;
-        background-color: $primary-color-light;
-        content: " ";
         width: 125px;
     }
 }
 
 // Tertiary Heading
 .tertiary-heading {
+    color: $color-black;
     font-size: 2.5rem;
     font-weight: 100;
+}
+
+.sub-text {
     color: $color-black;
+    font-size: 1.7rem;
+    line-height: 1.8;
+
+    &:not(:last-child) {
+        padding-bottom: 1rem;
+    }
 }

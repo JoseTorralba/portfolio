@@ -42,11 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     });
-
     
     // About Background Image On Scroll
     $(window).scroll(function() {
-
         const scrollPosition = $(window).scrollTop()/2;
 
         $('.about-section').css({
@@ -63,4 +61,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     });
 });
-  

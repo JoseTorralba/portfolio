@@ -3,14 +3,18 @@
 @import "abstracts/variables";
 
 // BASE
+@import "base/animations";
 @import "base/base";
 @import "base/classes";
 @import "base/typography";
 
 // COMPONENTS
 @import "components/button";
+@import "components/contact";
+
 @import "components/feature";
 @import "components/project-box";
+@import "components/testimonials";
 
 // LAYOUT
 @import "layout/about";

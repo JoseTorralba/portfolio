@@ -1,12 +1,10 @@
 // Section Default Styles
-section {
-    padding: 6rem 0;
-}
+section { padding: 6rem 0; }
 
 // Feature Section Styles
 .feature-section {
     background-color: $color-white;
-    padding: 6rem 0 16rem;
+    padding: 6rem 0 20rem;
 
     @include respond(tablet-portrait) {
         padding: 6rem 0 14rem;
@@ -20,7 +18,7 @@ section {
         rgba($color-black, 0.2),
         rgba($color-black, 1)),
     url(../img/nyc-bg.jpg);
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     background-position: top;
 
@@ -31,6 +29,5 @@ section {
 
 // Project Section Styles
 .project-section {
-    padding: 6rem 0 25rem;
     background-color: #f4f4f4;
 }

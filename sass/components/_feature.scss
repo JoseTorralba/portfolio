@@ -1,44 +1,88 @@
 // Feature box
 .feature-box {
     background-color: rgba($color-white, .8);
-    text-align: center;
-    padding: 4rem 2rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    margin-top: 4rem;
+    padding: 0 2rem 4rem;
+    text-align: center;
     transition: all .3s;
-
-    // height: 29rem;
 
     @include respond(tablet-portrait) {
         margin-bottom: 3rem;
     }
 
     &:hover {
-        transform: translateY(-1.6rem);
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .20);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
+        transform: translateY(-.2rem);
     }
 
     // Feature Icon
     &__icon {
-        color: $primary-color-light;
-        text-shadow: 0px 5px 10px #aaa;
-        font-size: 6rem;
-        padding: 3.8rem 0;
+        position: relative;
+        background-color: $primary-color-light;
+        border-radius: 2rem;
+        color: #fff;
+        display: inline-block;
+        font-size: 5rem;
+        text-align: center;
+        text-shadow: 0px 5px 10px rgb(78, 78, 78);
+        height: 10rem;
+        width: 10rem;
+        top: -4.5rem;
+
+        &--1 {
+            position: absolute;
+            top: 2.4rem;
+            left: 1.8rem;
+
+            @include respond(tablet-portrait) {
+                left: 2.2rem;
+            }
+        }
+
+        &--2 {
+            position: absolute;
+            top: 2.4rem;
+            left: 1.8rem;
+            @include respond(tablet-portrait) {
+                left: 2.2rem;
+            }
+        }
+
+        &--3 {
+            position: absolute;
+            top: 2.5rem;
+            left: 3.3rem;
+            @include respond(tablet-portrait) {
+                left: 3.5rem;
+            }
+        }
+    }
+
+    // Feature heading
+    &__heading {
+        color: $color-black;
+        font-size: 2.5rem;
+        font-weight: 100;
+        margin-top: -2rem;
+        padding-bottom: 1.8rem;
+        text-align: center;
     }
 
     // Feature text
     &__text {
         font-size: 1.6rem;
         font-weight: 100;
+        line-height: 1.7;
+        text-align: left !important;
     }
 
     // Feature Button
     &__btn {
-
         @include respond(tablet-portrait) {
             margin-bottom: 5rem;
         }
-        
         @include respond(older-phone) {
             margin-bottom: 1rem;
         }    
