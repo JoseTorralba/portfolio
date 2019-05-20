@@ -62,6 +62,10 @@
         transition: all .3s;
         width: 100%;
         z-index: 1000;
+
+        @include respond(smaller-phone) {
+            top: 44%;
+        }
     }
 
     // Navbar - li
@@ -122,11 +126,12 @@
                 color: $primary-color-text;
                 text-shadow: 0px 5px 10px rgb(15, 15, 15);
                 transform: translateY(-.1rem);
+            }
 
-                @include respond(tablet-portrait) {
-                    color: none;
-                    transform: none;
-                }
+            @include respond(tablet-portrait) {
+             
+                color: $color-white !important;
+                transform: none;
             }
         }
     }

@@ -25,6 +25,12 @@
             border-radius: 5rem;
             padding: 1.3rem 2rem;
         }
+
+        @include respond(tablet-portrait) {
+            background-color: $primary-color-light;
+            border-radius: 5rem;
+            padding: 1.3rem 2rem;
+        }
     }
 
     &--purple {
