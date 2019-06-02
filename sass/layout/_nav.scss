@@ -3,7 +3,7 @@
     // Navigation Background
     &__background {
         animation-name: moveInRight;
-        animation-duration: .5s;
+        animation-duration: .8s;
         animation-timing-function: ease-in-out;
         background-color: $primary-color;
         border-radius: 50rem;
@@ -113,7 +113,7 @@
 
         &--icon {
             animation-name: moveInRight;
-            animation-duration: .5s;
+            animation-duration: .8s;
             animation-timing-function: ease-in-out;
             cursor: pointer;
             font-size: 3.5rem;
