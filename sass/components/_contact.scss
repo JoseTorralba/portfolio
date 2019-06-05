@@ -1,6 +1,6 @@
 .contact-media {
     @include clearfix;
-    margin-top: -3rem;
+    margin-top: -4rem;
 
     &__list {
         display: block;
@@ -9,7 +9,7 @@
         width: 25%;
     }
 
-    &__fig {
+    &__container {
         background: #F76060;
         border-top: 1.2px solid #000;
         border-bottom: 1.2px solid #000;
@@ -49,6 +49,7 @@
             top: 4rem;
             left: 50%;
             transform: translate(-50%);
+            text-shadow: 0px 5px 10px rgb(100, 100, 100);
 
             @include respond(phone) {
                 font-size: 4.5rem;
