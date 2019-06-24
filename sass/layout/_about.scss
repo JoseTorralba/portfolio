@@ -1,57 +1,27 @@
 // About 
 .about {
-    margin-top: -18rem;
 
-    // About Img
     &__img {
         background-color: #fff;
-        border-radius: 50rem;
+        border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         display: block;
         padding: 1rem;
         margin: 0 auto;
-        width: 18%;
+        width: 100%;
         transition: all .3s;
 
-        @include respond(tablet-portrait) {
-            width: 25%;
-        }
-        @include respond(phone) {
-            width: 50%;
-        }
+        @include respond(tablet-portrait) { width: 50%; }
+        @include respond(phone) { width: 80%; }
     }
 
     // About Text
     &__text {
         font-size: 1.6rem;
+        line-height: 1.8;
 
         &:not(:last-child) {
             padding-bottom: 2rem;
-        }
-    }
-
-    &__btn {
-        display: inline;
-        padding-right: 2rem;
-    }
-
-    // About Devicon Icons
-    &__devicon {
-        font-size: 9rem;
-        // padding: 2rem;
-        // text-shadow: 0px 5px 10px #aaa;
-
-        @include respond(tablet-portrait) {
-            font-size: 10rem;
-        }
-        @include respond(phone) {
-            font-size: 9.4rem;
-        }
-        @include respond(smaller-phone) {
-            font-size: 7.5rem;
-        }
-        @include respond(older-phone) {
-            font-size: 6rem;
         }
     }
 }

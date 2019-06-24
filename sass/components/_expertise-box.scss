@@ -1,10 +1,10 @@
-// Feature box
-.feature-box {
+// Expertise box
+.expertise-box {
     background-color: rgba($color-white, .8);
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     margin-top: 4rem;
-    padding: 0 2rem 4rem;
+    padding: 0 2.2rem 3rem;
     text-align: center;
     transition: all .3s;
 
@@ -17,7 +17,7 @@
         transform: translateY(-.2rem);
     }
 
-    // Feature Icon
+    // Expertise Icon
     &__icon {
         position: relative;
         background-color: $primary-color-light;
@@ -60,7 +60,7 @@
         }
     }
 
-    // Feature heading
+    // Expertise heading
     &__heading {
         color: $color-black;
         font-size: 2.5rem;
@@ -70,21 +70,11 @@
         text-align: center;
     }
 
-    // Feature text
+    // Expertise text
     &__text {
         font-size: 1.6rem;
         font-weight: 100;
         line-height: 1.7;
         text-align: left !important;
-    }
-
-    // Feature Button
-    &__btn {
-        @include respond(tablet-portrait) {
-            margin-bottom: 5rem;
-        }
-        @include respond(older-phone) {
-            margin-bottom: 1rem;
-        }    
     }
 }

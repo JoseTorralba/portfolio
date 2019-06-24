@@ -33,52 +33,33 @@
         }
     }
 
-    &--purple {
-        border-radius: 5rem;
-        color: $color-black;
-        font-size: 1.5rem;
-        // padding: 1rem 2rem;
+    &--secondary,
+    &--project {
+        border: none;
+        color: $color-white;
+        font-size: 1.4rem;
         transition: all .3s;
+        background-color: $primary-color;
+        border-radius: 3px;
+        padding: 1.4rem 1.6rem;
+        margin-top: .7rem;
 
-        &::after {
-            background-color: $primary-color-light;
-            content: "";
-            display: block;
-            margin: 0 auto;
-            margin-top: .4rem;
-            height: 1.4px;
-            width: 6rem;
-            transition: all .3s;
+        &:not(:last-child) {
+            margin-right: 2rem;
         }
 
         &:hover {
-            // background-color: $primary-color-dark;
-            &::after {
-                width: 10rem;
-            }
+            transform: translateY(-.2rem);
         }
     }
-    &--purple-dark {
-        border: none;
-        color: $primary-color;
-        font-size: 1.7rem;
-        transition: all .3s;
 
-        &::after {
-            background-color: $primary-color-light;
-            content: "";
-            display: block;
-            margin: 0 auto;
-            margin-top: .8rem;
-            height: 1.3px;
-            width: 10rem;
-            transition: all .3s;
-        }
+    &--project {
+        font-size: 1.3rem;
+        padding: .8rem 1.2rem;
+        margin-top: 0;
 
-        &:hover {
-            &::after {
-                width: 18rem;
-            }
+        &:not(:last-child) {
+            margin-right: 1rem;
         }
     }
 }

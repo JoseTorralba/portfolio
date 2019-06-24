@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navigation.icon.removeAttribute("fas fa-bars navigation__toggle--icon");
             navigation.list.style.opacity = '1';
   
-          } else {
+        } else {
             navigation.icon.setAttribute("class", "fas fa-bars navigation__toggle--icon");
             navigation.icon.removeAttribute('fas fa-times navigation__toggle--icon');
             navigation.list.style.opacity = '0';
@@ -43,15 +43,19 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     });
     
-    // About Background Image On Scroll
+    // About & Header Background Image On Scroll
     $(window).scroll(function() {
-        const scrollPosition = $(window).scrollTop()/2;
-
+        const scrollAboutPosition = $(window).scrollTop()/4;
         $('.about-section').css({
-            'background-position-x' : + scrollPosition + 'px'
+            'background-position-x' : + scrollAboutPosition + 'px'
+        });
+
+        const scrollHeaderPosition = $(window).scrollTop()/ 2;
+        $('.header').css({
+            'background-position-y' : + scrollHeaderPosition + 'px'
         });
     });
-  
+
     // Scroll animation
     $("a.scroll").click(function (event) {
         event.preventDefault();

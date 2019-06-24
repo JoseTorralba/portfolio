@@ -1,0 +1,44 @@
+.skills-box {
+    @include clearfix;
+    background-color: $primary-color;
+    padding: 4rem 0;
+    transform: skewY(-3deg);
+    & > * { transform: skewY(3deg); }
+
+    @include respond(phone) {
+        padding: 2rem 0;
+        transform: skewY(0);
+        & > * { transform: skewY(0); }
+    }
+
+    &__row {
+        margin: 0 auto;
+        max-width: 114rem;
+    }
+
+    &__container {
+        display: block;
+        float: left;
+        width: 20%;
+        text-align: center;
+        overflow: hidden;
+        transition: all .3s;
+        padding: 3.5rem 0;
+
+        @include respond(phone) {
+            width: 33%;
+            padding: 2.5rem 0;
+        }
+
+        @include respond(smaller-phone) {
+            width: 50%;
+        }
+    }
+    
+    &__icon {
+        color: #fff;
+        display: block;
+        font-size: 12rem;
+        text-shadow: 0px 5px 10px rgb(46, 46, 46);
+    }
+}
