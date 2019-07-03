@@ -11,20 +11,26 @@ document.addEventListener('DOMContentLoaded', function() {
         icon: document.querySelector('.navigation__toggle--icon')
     };
 
+
+
+
+
     // When Mobile Nav is Clicked
     navigation.icon.addEventListener('click', function() {
         navigation.nav.classList.toggle('navigation__active');
         navigation.list.style.opacity = '1';
         toggleNavIcon();
-
-        toggleItem.forEach(function (toggleItem) {
-            toggleItem.addEventListener('click', function() {
-                navigation.nav.classList.remove('navigation__active');
-                toggleNavIcon();
-            })
-        });
     });
-    
+  
+
+    // This needs to be worked on for mobile
+    toggleItem.forEach(function (toggleItem) {
+        toggleItem.addEventListener('click', function() {
+            navigation.nav.classList.remove('navigation__active');
+            toggleNavIcon();
+        })
+    });
+
     // Toggles Nav Icon
     function toggleNavIcon() {
         if (navigation.icon.classList.contains('fa-bars')) {
