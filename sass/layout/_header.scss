@@ -12,7 +12,6 @@
 
     // background-attachment: fixed;
     background-size: cover;
-    background-position: bottom;
 
     @include respond(tablet-portrait) {
         background-attachment: scroll;

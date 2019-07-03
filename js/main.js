@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
 
-
-
-
     // When Mobile Nav is Clicked
     navigation.icon.addEventListener('click', function() {
         navigation.nav.classList.toggle('navigation__active');
