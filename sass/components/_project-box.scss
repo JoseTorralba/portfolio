@@ -5,8 +5,7 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     text-align: center;
     transition: all .3s;
-
-    padding: 2rem 0 2.5rem;
+    padding: 2rem 0;
 
     &:hover {
         box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
@@ -37,28 +36,28 @@
         background-size: cover;
         height: 20rem;
 
+        &--ffvii-countdown {
+            background-image: url(../img/test.png);
+        }
+
         &--carriercrumbs {
-            background-image: url(../img/carriercrumbs.png);
+            background-image: url(../img/carriercrumbs.jpg);
         }
 
         &--giphy-api {
-            background-image: url(../img/giphy-api.png);
+            background-image: url(../img/giphy-api.jpg);
         }
 
         &--bloodborne-rpg {
-            background-image: url(../img/bb-rpg.png);
-        }
-
-        &--kh3-countdown {
-            background-image: url(../img/kh.png);
+            background-image: url(../img/bb-rpg.jpg);
         }
 
         &--poke-api {
-            background-image: url(../img/pokemon-api.png);
+            background-image: url(../img/pokemon-api.jpg);
         }
 
         &--pig-game {
-            background-image: url(../img/pig-game.png);
+            background-image: url(../img/pig-game.jpg);
         }
 
         @include respond(tablet-portrait) {

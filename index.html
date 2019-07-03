@@ -28,16 +28,16 @@
         <nav class="navigation__nav">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="#expertise" class="navigation__link scroll">Skills</a>
+                    <a href="#expertise" class="navigation__link">Skills</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#about" class="navigation__link scroll">About me</a>
+                    <a href="#about" class="navigation__link">About</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#project" class="navigation__link scroll">Projects</a>
+                    <a href="#project" class="navigation__link">Projects</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#contact" class="navigation__link scroll">Contact</a>
+                    <a href="#contact" class="navigation__link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -45,7 +45,7 @@
 
     <!-- Navigation Toggle -->
     <div class="navigation__toggle">
-        <i class="fas fa-bars navigation__toggle--icon" aria-hidden="true"></i>
+        <i class="fas fa-bars navigation__toggle--icon"></i>
     </div>
 
     <!-- Header -->
@@ -57,7 +57,7 @@
                 <span class="primary-heading--sub">An aspiring front end web developer</span>
             </h1>
             <div class="margin-top-medium">
-                <a href="#project" class="btn btn--main scroll">View projects &rarr;</a>
+                <a href="#project" class="btn btn--main">View projects</a>
             </div>
         </div>
     </header>
@@ -69,6 +69,7 @@
                 My expertise
             </h2>
         </div>
+
         <div class="row">
             <!-- Expertise 1 -->
             <div class="col-1-of-3">
@@ -173,32 +174,24 @@
         </div>
 
         <div class="row">
-            <div class="col-1-of-3">
-                <div class="about">
-                    <img src="img/me.jpg" alt="Image of Jose" class="about__img">
-                </div>
-            </div>
+            <div class="about">
+                <p class="about__text">
+                    My name's Jose Torralba, I'm an aspiring front end web developer from New York City.
+                </p>
+                <p class="about__text">
+                    I'm currently working as a Supplemental Instructor at BMCC's Media Arts and Technology department. I assist
+                    students with their classwork, assignments, and projects alongside the professor.
+                </p>
+                <p class="about__text">
+                    On my free time, I enjoy learning new things to further improve my coding and design skills and to implement
+                    them on old projects. I also enjoy playing video games to release the stress of an intense coding session.
+                </p>
 
-            <div class="col-2-of-3">
-                <div class="about">
-                    <p class="about__text">
-                        My name's Jose Torralba, I'm an aspiring front end web developer from New York City.
-                    </p>
-                    <p class="about__text">
-                        I'm currently working as a Supplemental Instructor at BMCC's Media Arts and Technology department. I assist
-                        students with their classwork, assignments, and projects alongside the professor.
-                    </p>
-                    <p class="about__text">
-                        On my free time, I enjoy learning new things to further improve my coding and design skills and to implement
-                        them on old projects. I also enjoy playing video games to release the stress of an intense coding session.
-                    </p>
-
-                    <p class="about__text">
-                        Interested in knowing more about what I do?
-                    </p>
-                    <a href="JoseTorralba-Resume.pdf" target="_blank" class="btn btn--secondary">View resume</a>
-                    <a href="https://github.com/JoseTorralba" target="_blank" class="btn btn--secondary">View my GitHub</a>
-                </div>
+                <p class="about__text">
+                    Interested in knowing more about what I do?
+                </p>
+                <a href="JoseTorralba-Resume.pdf" target="_blank" class="btn btn--secondary">View resume</a>
+                <a href="https://github.com/JoseTorralba" target="_blank" class="btn btn--secondary">View my GitHub</a>
             </div>
         </div>
     </section>
@@ -211,20 +204,19 @@
             </h2>
         </div>
         <div class="row">
-            <!-- Carrier Crumbs -->
+            <!-- Bloodborne RPG -->
             <div class="col-1-of-3">
                 <div class="project-box">
-                    <h3 class="project-box__heading">Carrier Crumbs</h3>
-                    <div class="project-box__img project-box__img--carriercrumbs">&nbsp;</div>
+                    <h3 class="project-box__heading">FFVII Countdown</h3>
+                    <div class="project-box__img project-box__img--ffvii-countdown">&nbsp;</div>
                     <div class="project-box__text">
                         <p>
-                            Designed and Developed this website for Carrier Crumbs, a Brooklyn based production company.
-                            <!-- working to enhance the careers of up and coming artists. -->
+                            Landing Page and Countdown to the release date of Final Fantasy VII Remake made with HTML, CSS/SASS and JS.
                         </p>
                     </div>
                     <div>
-                        <a href="http://carriercrumbs.com/" target="_blank" class="btn btn--project">View project</a>
-                        <a href="https://github.com/carriercrumbs/CarrierCrumbs" target="_blank" class="btn btn--project">View source</a>
+                        <a href="https://josetorralba.github.io/FFVIIR-Countdown/" target="_blank" class="btn btn--project">Live demo</a>
+                        <a href="https://github.com/JoseTorralba/FFVIIR-Countdown" target="_blank" class="btn btn--project">View code</a>
                     </div>
                 </div>
             </div>
@@ -240,11 +232,37 @@
                         </p>
                     </div>
                     <div>
-                        <a href="https://josetorralba.github.io/BloodborneRPG/" target="_blank" class="btn btn--project">View project</a>
-                        <a href="https://github.com/JoseTorralba/BloodborneRPG" target="_blank" class="btn btn--project">View source</a>
+                        <a href="https://josetorralba.github.io/BloodborneRPG/" target="_blank" class="btn btn--project">Live demo</a>
+                        <a href="https://github.com/JoseTorralba/BloodborneRPG" target="_blank" class="btn btn--project">View code</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Carrier Crumbs -->
+            <div class="col-1-of-3">
+                <div class="project-box">
+                    <h3 class="project-box__heading">Carrier Crumbs</h3>
+
+                    <!-- <p class="project-box__sub-heading">
+                        Freelance Site
+                    </p> -->
+
+                    <div class="project-box__img project-box__img--carriercrumbs">&nbsp;</div>
+                    <div class="project-box__text">
+                        <p>
+                            Designed and Developed this website for Carrier Crumbs, a Brooklyn based production company.
+                            <!-- working to enhance the careers of up and coming artists. -->
+                        </p>
+                    </div>
+                    <div>
+                        <a href="http://carriercrumbs.com/" target="_blank" class="btn btn--project">Live demo</a>
+                        <a href="https://github.com/carriercrumbs/CarrierCrumbs" target="_blank" class="btn btn--project">View code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
 
             <!-- Pokemon API -->
             <div class="col-1-of-3">
@@ -257,14 +275,12 @@
                         </p>
                     </div>
                     <div>
-                        <a href="https://josetorralba.github.io/Pokemon-API/" target="_blank" class="btn btn--project">View project</a>
-                        <a href="https://github.com/JoseTorralba/Pokemon-API" target="_blank" class="btn btn--project">View source</a>
+                        <a href="https://josetorralba.github.io/Pokemon-API/" target="_blank" class="btn btn--project">Live demo</a>
+                        <a href="https://github.com/JoseTorralba/Pokemon-API" target="_blank" class="btn btn--project">View code</a>
                     </div>
                 </div>
             </div>  
-        </div>
 
-        <div class="row">
             <!-- Giphy API -->
             <div class="col-1-of-3">
                 <div class="project-box">
@@ -276,8 +292,8 @@
                         </p>
                     </div>
                     <div>
-                        <a href="https://josetorralba.github.io/Giphy-API/" target="_blank" class="btn btn--project">View project</a>
-                        <a href="https://github.com/JoseTorralba/Giphy-API" target="_blank" class="btn btn--project">View source</a>
+                        <a href="https://josetorralba.github.io/Giphy-API/" target="_blank" class="btn btn--project">Live demo</a>
+                        <a href="https://github.com/JoseTorralba/Giphy-API" target="_blank" class="btn btn--project">View code</a>
                     </div>
                 </div>
             </div>
@@ -293,8 +309,8 @@
                         </p>
                     </div>
                     <div>
-                        <a href="https://josetorralba.github.io/Pig-Game/" target="_blank" class="btn btn--project">View project</a>
-                        <a href="https://github.com/JoseTorralba/Pig-Game" target="_blank" class="btn btn--project">View source</a>
+                        <a href="https://josetorralba.github.io/Pig-Game/" target="_blank" class="btn btn--project">Live demo</a>
+                        <a href="https://github.com/JoseTorralba/Pig-Game" target="_blank" class="btn btn--project">View code</a>
                     </div>
                 </div>
             </div>
@@ -304,52 +320,43 @@
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="row">
-            <div class="text-center">
-                <h2 class="secondary-heading">
-                    Let's stay in touch!
-                </h2>
-                <p class="sub-text">
+            <div class="contact-box">
+                <div>
+                    <h2 class="secondary-heading">
+                            Let's stay in touch!
+                    </h2>
+                </div>
+
+                <p class="contact-box__text">
                     Like my Portfolio and interested in working together?
                 </p>
-
-                <p class="sub-text">
+    
+                <p class="contact-box__text">
                     Feel free to reach out to me with any of the links below and let's create something great together!
                 </p>
+
+                <div class="contact-box__social-media">
+                    <ul class="contact-box__list">
+                        <a href="https://github.com/JoseTorralba" target="_blank" class="contact-box__link">
+                            <li class="contact-box__item">
+                                <i class="fab fa-github"></i>
+                            </li>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/jose-torralba/" target="_blank" class="contact-box__link">
+                            <li class="contact-box__item">
+                                <i class="fab fa-linkedin"></i>
+                            </li>
+                        </a>
+
+                        <a href="mailto:josetorralba.1215@gmail.com" class="contact-box__link">
+                            <li class="contact-box__item">
+                                <i class="fas fa-envelope"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <div class="contact-media">
-            <a href="https://github.com/JoseTorralba" target="_blank">
-                <div class="contact-media__container">
-                    <div class="contact-media__text">
-                        <i class="fab fa-github contact-media__text--icon"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/jose-torralba/" target="_blank">
-                <div class="contact-media__container">
-                    <div class="contact-media__text">
-                        <i class="fab fa-linkedin contact-media__text--icon"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://www.instagram.com/mexy.js/" target="_blank">
-                <div class="contact-media__container">
-                    <div class="contact-media__text">
-                        <i class="fab fa-instagram contact-media__text--icon"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="mailto:josetorralba.1215@gmail.com">
-                <div class="contact-media__container">
-                    <div class="contact-media__text">
-                        <i class="far fa-envelope contact-media__text--icon"></i>
-                    </div>
-                </div>
-            </a>
         </div>
     </section>
 
@@ -358,12 +365,10 @@
         <div class="row">
             <p class="footer__text">
                 &copy; 2019 Designed & Developed by 
-                <a href="#header" class="footer__text-link scroll">Jose Torralba</a>
+                <a href="#header" class="footer__text-link">Jose Torralba</a>
             </p>
         </div>
     </footer>
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
 </body>

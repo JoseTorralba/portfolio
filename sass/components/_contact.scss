@@ -1,63 +1,76 @@
-.contact-media {
-    @include clearfix;
-    margin-top: -4rem;
+.contact-box {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
+    // color: $color-black;
+    line-height: 1.8;
+    padding: 5rem 0;
+    text-align: center;
 
-    &__container {
-        display: block;
-        float: left;
-        // opacity: 0;
-        width: 25%;
-        background: #F76060;
-        border-top: 1.2px solid #000;
-        border-bottom: 1.2px solid #000;
-        margin: 0;
-        // width: 100%;
-        height: 16rem;
-        overflow: hidden;
-        transition: all .3s;
-        filter: grayscale(100%);
-
-        &:hover {
-            filter: grayscale(0);
+    &__text {
+        font-size: 2rem;
+        font-weight: 900;
+        // padding-bottom: 3rem;
+        &:not(:last-child) {
+            padding-bottom: 1rem;
         }
 
         @include respond(tablet-portrait) {
-            // filter: none;
+            text-align: left;
+            padding: 0 4rem;
         }
 
         @include respond(phone) {
-            height: 12rem;
-        }
-
-        @include respond(smaller-phone) {
-            font-size: 14rem;
+            text-align: center;
         }
     }
 
-    &__text {
-        position: relative;
+    &__social-media {
+        display: inline-block;
+        margin-top: 2rem;
 
-        &--icon {
-            color: #fff;
-            display: block;
-            font-size: 8rem;
-            position: absolute;
-            top: 4rem;
-            left: 50%;
-            transform: translate(-50%);
-            text-shadow: 0px 5px 10px rgb(100, 100, 100);
+        
+    }
 
-            @include respond(phone) {
-                font-size: 4.5rem;
-            }
-            
-            @include respond(smaller-phone) {
-                font-size: 4rem;
-            }
+    &__list {
+        list-style: none;
 
-            @include respond(older-phone) {
-                top: 4rem;
+        @include respond(smaller-phone) { 
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);        
+        }
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        @include respond(smaller-phone) { 
+            &:not(:last-child) {
+                margin-right: 0;
             }
+        }
+    }
+
+    &__item {
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+        display: inline-block;
+        font-size: 4rem;
+        background: $primary-color;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;    
+        line-height: 80px;
+        transition: all .3s;
+        @include respond(tablet-portrait) { margin-bottom: 2rem; }
+
+        &:hover {
+            text-shadow: 0px 5px 10px rgb(78, 78, 78);
+            transform: translateY(-.3rem);
         }
     }
 }

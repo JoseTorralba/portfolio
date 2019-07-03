@@ -22,11 +22,15 @@ section { padding: 6rem 0; }
     background-size: cover;
     background-position: top; 
     color: $color-white;
-    margin-top: -10rem;
+    margin-top: -12rem;
     padding-top: 12rem;
 }
 
 // Project Section Styles
 .project-section {
     background-color: #f4f4f4;
+}
+
+.contact-section {
+    background-color: $primary-color;
 }
