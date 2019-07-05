@@ -71,4 +71,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Contact Background gradient/color on scroll?
 
     })
+
+
+    // Scroll animation
+    $("a.scroll").click(function (event) {
+        event.preventDefault();
+
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top
+        }, 1000);
+    });
 });
