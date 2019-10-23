@@ -335,7 +335,7 @@ body {
     background-size: cover;
     height: 20rem; }
     .project-box__img--ffvii-countdown {
-      background-image: url(../img/ffviir7.jpg); }
+      background-image: url(../img/ffviir.jpg); }
     .project-box__img--carriercrumbs {
       background-image: url(../img/carriercrumbs.jpg); }
     .project-box__img--giphy-api {
@@ -344,8 +344,8 @@ body {
       background-image: url(../img/bb-rpg.jpg); }
     .project-box__img--poke-api {
       background-image: url(../img/pokemon-api.jpg); }
-    .project-box__img--pig-game {
-      background-image: url(../img/pig-game.jpg); }
+    .project-box__img--monster-list {
+      background-image: url(../img/monster-list.jpg); }
     @media only screen and (max-width: 56.25em) {
       .project-box__img {
         height: 30rem; } }

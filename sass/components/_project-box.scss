@@ -37,27 +37,22 @@
         height: 20rem;
 
         &--ffvii-countdown {
-            background-image: url(../img/ffviir7.jpg);
+            background-image: url(../img/ffviir.jpg);
         }
-
         &--carriercrumbs {
             background-image: url(../img/carriercrumbs.jpg);
         }
-
         &--giphy-api {
             background-image: url(../img/giphy-api.jpg);
         }
-
         &--bloodborne-rpg {
             background-image: url(../img/bb-rpg.jpg);
         }
-
         &--poke-api {
             background-image: url(../img/pokemon-api.jpg);
         }
-
-        &--pig-game {
-            background-image: url(../img/pig-game.jpg);
+        &--monster-list {
+            background-image: url(../img/monster-list.jpg);
         }
 
         @include respond(tablet-portrait) {
