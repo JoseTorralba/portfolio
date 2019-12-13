@@ -62,15 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const headerScroll = window.pageYOffset/2;
         var getHeaderBackground = document.querySelector('.header');
         getHeaderBackground.style.backgroundPositionY = headerScroll + 'px';
-
-        // About Background on Scroll
-        const aboutScroll = window.pageYOffset/2;
-        var getAboutBackground = document.querySelector('.about-section');
-        getAboutBackground.style.backgroundPositionX = aboutScroll + 'px';
-
-        // Contact Background gradient/color on scroll?
-
-    })
+    });
 
 
     // Scroll animation

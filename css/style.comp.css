@@ -28,7 +28,6 @@
   box-sizing: inherit; }
 
 html {
-  scroll-behavior: smooth;
   font-size: 62.5%; }
   @media only screen and (max-width: 37.5em) {
     html {
@@ -336,7 +335,7 @@ body {
     background-size: cover;
     height: 20rem; }
     .project-box__img--ffvii-countdown {
-      background-image: url(../img/test.png); }
+      background-image: url(../img/ffviir.jpg); }
     .project-box__img--carriercrumbs {
       background-image: url(../img/carriercrumbs.jpg); }
     .project-box__img--giphy-api {
@@ -345,8 +344,8 @@ body {
       background-image: url(../img/bb-rpg.jpg); }
     .project-box__img--poke-api {
       background-image: url(../img/pokemon-api.jpg); }
-    .project-box__img--pig-game {
-      background-image: url(../img/pig-game.jpg); }
+    .project-box__img--monster-list {
+      background-image: url(../img/monster-list.jpg); }
     @media only screen and (max-width: 56.25em) {
       .project-box__img {
         height: 30rem; } }
@@ -671,6 +670,7 @@ section {
 
 .about-section {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), black), url(../img/nyc-bg.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: top;
   color: #fff;
