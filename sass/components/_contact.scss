@@ -28,8 +28,7 @@
     &__social-media {
         display: inline-block;
         margin-top: 2rem;
-
-        
+        text-shadow: 0px 1px 3px rgb(0, 0, 0);
     }
 
     &__list {
@@ -69,7 +68,7 @@
         @include respond(tablet-portrait) { margin-bottom: 2rem; }
 
         &:hover {
-            text-shadow: 0px 5px 10px rgb(78, 78, 78);
+            text-shadow: 0px 4px 6px rgb(0, 0, 0);
             transform: translateY(-.3rem);
         }
     }

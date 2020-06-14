@@ -78,16 +78,16 @@ body {
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  text-shadow: 0px 2px 4px #000;
   width: 100%; }
   .primary-heading--main {
     color: #fff;
     display: block;
     font-size: 9rem;
     font-weight: 500;
-    letter-spacing: 2px;
-    padding-bottom: .5rem;
-    text-shadow: 0px 5px 10px #000; }
+    padding-bottom: .5rem; }
     @media only screen and (max-width: 37.5em) {
       .primary-heading--main {
         font-size: 6.8rem; } }
@@ -101,9 +101,7 @@ body {
     color: #FFA3A3;
     display: block;
     font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-shadow: 0px 5px 10px #000; }
+    font-weight: 300; }
     @media only screen and (max-width: 37.5em) {
       .primary-heading--sub {
         font-size: 2.5rem;
@@ -163,7 +161,8 @@ body {
   .btn--main:hover {
     background-color: #F76060;
     border-radius: 5rem;
-    padding: 1.3rem 2rem; }
+    padding: 1.3rem 2rem;
+    text-shadow: 0px 1px 3px black; }
   @media only screen and (max-width: 56.25em) {
     .btn--main {
       background-color: #F76060;
@@ -178,7 +177,8 @@ body {
   background-color: #E04343;
   border-radius: 3px;
   padding: 1.4rem 1.6rem;
-  margin-top: .7rem; }
+  margin-top: .7rem;
+  text-shadow: 0px 1px 3px black; }
   .btn--secondary:not(:last-child), .btn--project:not(:last-child) {
     margin-right: 2rem; }
   .btn--secondary:hover, .btn--project:hover {
@@ -215,7 +215,8 @@ body {
         text-align: center; } }
   .contact-box__social-media {
     display: inline-block;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    text-shadow: 0px 1px 3px black; }
   .contact-box__list {
     list-style: none; }
     @media only screen and (max-width: 25.875em) {
@@ -244,7 +245,7 @@ body {
       .contact-box__item {
         margin-bottom: 2rem; } }
     .contact-box__item:hover {
-      text-shadow: 0px 5px 10px #4e4e4e;
+      text-shadow: 0px 4px 6px black;
       transform: translateY(-0.3rem); }
 
 .expertise-box {
@@ -269,7 +270,7 @@ body {
     display: inline-block;
     font-size: 5rem;
     text-align: center;
-    text-shadow: 0px 5px 10px #4e4e4e;
+    text-shadow: 0px 2px 4px black;
     height: 10rem;
     width: 10rem;
     top: -4.5rem; }
@@ -404,7 +405,7 @@ body {
     color: #fff;
     display: block;
     font-size: 12rem;
-    text-shadow: 0px 5px 10px #2e2e2e; }
+    text-shadow: 0px 6px 8px #2e2e2e; }
 
 .about {
   margin: 0 auto;
@@ -491,10 +492,10 @@ body {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
-  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/header.jpg);
+  background-size: cover;
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/header-bg.jpg);
-  background-size: cover; }
+  position: relative; }
   @media only screen and (max-width: 56.25em) {
     .header {
       background-attachment: scroll; } }
@@ -669,7 +670,7 @@ section {
   margin-top: -5rem; }
 
 .about-section {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), black), url(../img/nyc-bg.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), black), url(../img/about.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
