@@ -7,32 +7,72 @@
     }
 }
 
-@mixin clearzoom { zoom: 1; }
+@mixin addFixedWidth {
+    margin: 0 auto;
+    max-width: 114rem;
+}
+
+@mixin addContainer($bgColor) {
+    background-color: $bgColor;
+    border-radius: 4px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
+    line-height: 1.8;
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+@mixin clearzoom {
+    zoom: 1;
+}
 
 // MEDIA QUERY MANAGER
 @mixin respond($breakpoint) {
 
-    @if $breakpoint == older-phone {
-        @media only screen and (max-width: 20em) { @content }; // 600px
+    @if $breakpoint==older-phone {
+        @media only screen and (max-width: 20em) {
+            @content
+        }
+
+        ; // 600px
     }
 
-    @if $breakpoint == smaller-phone {
-        @media only screen and (max-width: 25.875em) { @content }; // 600px
+    @if $breakpoint==smaller-phone {
+        @media only screen and (max-width: 25.875em) {
+            @content
+        }
+
+        ; // 600px
     }
 
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content }; // 600px
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        }
+
+        ; // 600px
     }
 
-    @if $breakpoint == tablet-portrait {
-        @media only screen and (max-width: 56.25em) { @content }; // 900px
+    @if $breakpoint==tablet-portrait {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+
+        ; // 900px
     }
 
-    @if $breakpoint == tablet-landscape {
-        @media only screen and (max-width: 75em) { @content }; // 1200px
+    @if $breakpoint==tablet-landscape {
+        @media only screen and (max-width: 75em) {
+            @content
+        }
+
+        ; // 1200px
     }
 
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) { @content }; // 1800px
+    @if $breakpoint==big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content
+        }
+
+        ; // 1800px
     }
 }

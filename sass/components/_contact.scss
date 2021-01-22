@@ -1,16 +1,11 @@
 .contact-box {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
-    // color: $color-black;
-    line-height: 1.8;
-    padding: 5rem 0;
-    text-align: center;
+    @include addFixedWidth;
+    @include addContainer(#fff);
 
     &__text {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 900;
-        // padding-bottom: 3rem;
+
         &:not(:last-child) {
             padding-bottom: 1rem;
         }
@@ -19,53 +14,30 @@
             text-align: left;
             padding: 0 4rem;
         }
-
-        @include respond(phone) {
-            text-align: center;
-        }
     }
 
-    &__social-media {
+    &__social {
         display: inline-block;
         margin-top: 2rem;
         text-shadow: 0px 1px 3px rgb(0, 0, 0);
     }
 
-    &__list {
-        list-style: none;
-
-        @include respond(smaller-phone) { 
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);        
-        }
-    }
-
     &__link {
         color: #fff;
-        text-decoration: none;
-
-        &:not(:last-child) {
-            margin-right: 3rem;
-        }
-
-        @include respond(smaller-phone) { 
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-        }
-    }
-
-    &__item {
+        background: $primary-color;
+        border-radius: 50%;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
         display: inline-block;
         font-size: 4rem;
-        background: $primary-color;
+        line-height: 80px;
+        text-decoration: none;
+        transition: all .3s;
         width: 80px;
         height: 80px;
-        border-radius: 50%;    
-        line-height: 80px;
-        transition: all .3s;
-        @include respond(tablet-portrait) { margin-bottom: 2rem; }
+
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
 
         &:hover {
             text-shadow: 0px 4px 6px rgb(0, 0, 0);
@@ -73,4 +45,3 @@
         }
     }
 }
-

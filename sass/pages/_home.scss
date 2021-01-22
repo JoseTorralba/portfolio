@@ -1,5 +1,7 @@
 // Section Default Styles
-section { padding: 6rem 0; }
+section {
+    padding: 6rem 0;
+}
 
 // Feature Section Styles
 .expertise-section {
@@ -7,35 +9,58 @@ section { padding: 6rem 0; }
     padding: 6rem 0 8rem;
 }
 
-.skills-section {
-    margin-top: -5rem;
-}
-
 // About Section Styles
 .about-section {
-    background-image: linear-gradient(
-        to bottom,
-        rgba($color-black, 0.2),
-        rgba($color-black, 1)),
-    url(../img/about.jpg);
-    
+    background-image: linear-gradient(to bottom,
+            rgba($color-black, 0.2),
+            rgba($color-black, 1)),
+        url(../img/about.jpg);
+
     background-attachment: fixed;
     background-size: cover;
-    background-position: top; 
+    background-position: top;
     color: $color-white;
-    margin-top: -12rem;
-    padding-top: 12rem;
+    padding: 6rem 0 12rem;
 
     @include respond(tablet-portrait) {
         background-attachment: scroll;
     }
 }
 
+
+.skills-section {
+    background-color: $primary-color;
+    padding: 10rem 0;
+    margin-top: -4rem;
+
+    transform: skewY(-2deg);
+
+    &>* {
+        transform: skewY(2deg);
+    }
+
+    @include respond(phone) {
+        padding: 6rem 0;
+        transform: skewY(0);
+
+        &>* {
+            transform: skewY(0);
+        }
+    }
+}
+
 // Project Section Styles
 .project-section {
     background-color: #f4f4f4;
+    position: relative;
+    margin-top: -4rem;
+
+    @include respond(phone) {
+        margin-top: 0;
+    }
 }
 
 .contact-section {
     background-color: $primary-color;
+    padding: 4.5rem 0;
 }

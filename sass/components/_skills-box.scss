@@ -1,44 +1,30 @@
 .skills-box {
-    @include clearfix;
-    background-color: $primary-color;
-    padding: 4rem 0;
-    transform: skewY(-3deg);
-    & > * { transform: skewY(3deg); }
-
-    @include respond(phone) {
-        padding: 2rem 0;
-        transform: skewY(0);
-        & > * { transform: skewY(0); }
-    }
+    @include addFixedWidth;
+    @include addContainer(#fff);
 
     &__row {
-        margin: 0 auto;
-        max-width: 114rem;
-    }
-
-    &__container {
-        display: block;
-        float: left;
-        width: 20%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2.5rem;
         text-align: center;
-        overflow: hidden;
-        transition: all .3s;
-        padding: 3.5rem 0;
 
         @include respond(phone) {
-            width: 33%;
-            padding: 2.5rem 0;
+            grid-template-columns: repeat(3, 1fr);
         }
 
         @include respond(smaller-phone) {
-            width: 50%;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
-    
+
+    &__container {
+        padding: 1.2rem 0;
+    }
+
     &__icon {
         color: #fff;
         display: block;
         font-size: 12rem;
-        text-shadow: 0px 6px 8px rgb(46, 46, 46);
+        text-shadow: 0px 1.8px 1.8px rgb(0, 0, 0);
     }
 }
