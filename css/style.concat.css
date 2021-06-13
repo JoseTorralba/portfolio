@@ -633,44 +633,25 @@ body {
   width: 100% !important; }
 
 section {
-  padding: 6rem 0; }
+  padding: 8rem 0; }
 
 .expertise-section {
-  background-color: #fff;
-  padding: 6rem 0 8rem; }
+  background-color: #fff; }
 
 .about-section {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), black), url(../img/about.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black), url(../img/osa.jpg);
   background-attachment: fixed;
   background-size: cover;
-  background-position: top;
-  color: #fff;
-  padding: 6rem 0 12rem; }
+  color: #fff; }
   @media only screen and (max-width: 56.25em) {
     .about-section {
       background-attachment: scroll; } }
 
 .skills-section {
-  background-color: #E04343;
-  padding: 10rem 0;
-  margin-top: -4rem;
-  transform: skewY(-2deg); }
-  .skills-section > * {
-    transform: skewY(2deg); }
-  @media only screen and (max-width: 37.5em) {
-    .skills-section {
-      padding: 6rem 0;
-      transform: skewY(0); }
-      .skills-section > * {
-        transform: skewY(0); } }
+  background-color: #E04343; }
 
 .project-section {
-  background-color: #f4f4f4;
-  position: relative;
-  margin-top: -4rem; }
-  @media only screen and (max-width: 37.5em) {
-    .project-section {
-      margin-top: 0; } }
+  background-color: #f4f4f4; }
 
 .contact-section {
   background-color: #E04343;

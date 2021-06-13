@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const headerScroll = window.pageYOffset/2;
         var getHeaderBackground = document.querySelector('.header');
         getHeaderBackground.style.backgroundPositionY = headerScroll + 'px';
+
     });
 
 
