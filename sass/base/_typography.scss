@@ -1,95 +1,86 @@
 body {
-    color: $color-grey;
-    font-family: 'Varela', sans-serif;
-    font-weight: 100;
-    line-height: 1.5;
-    text-rendering: optimizeLegibility;
+   color: $color-black-light;
+   font-family: 'Varela', sans-serif;
+   font-weight: 100;
+   line-height: 1.5;
+   text-rendering: optimizeLegibility;
 }
 
 // Primary Heading
 .primary-heading {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0px 2px 4px #000;
-    width: 100%;
+   animation-name: fadeIn;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   text-shadow: 0px 2px 4px #000;
+   width: 100%;
 
+   &--main {
+      color: $color-white;
+      display: block;
+      font-size: 8rem;
+      font-weight: 500;
+      padding-bottom: .5rem;
 
-    &--main {
-        color: $color-white;
-        display: block;
-        font-size: 9rem;
-        font-weight: 500;
-        padding-bottom: .5rem;
+      @include respond(phone) {
+         font-size: 6.8rem;
+      }
 
-        @include respond(phone) {
-            font-size: 6.8rem;
-        }
+      @include respond(smaller-phone) {
+         font-size: 4.5rem;
+      }
 
-        @include respond(smaller-phone) {
-            font-size: 4.5rem;
-        }
+      @include respond(older-phone) {
+         font-size: 3rem;
+      }
+   }
 
-        @include respond(older-phone) {
-            font-size: 3rem;
-        }
-    }
+   &--sub {
+      color: $primary-color;
+      display: block;
+      font-size: 3rem;
+      font-weight: 300;
+      text-shadow: 0 .2rem .1rem rgba($primary-color, 0.50);
 
-    &--sub {
-        color: $primary-color-text;
-        display: block;
-        font-size: 3rem;
-        font-weight: 300;
+      @include respond(phone) {
+         font-size: 2.5rem;
+         letter-spacing: 1px;
+      }
 
-        @include respond(phone) {
-            font-size: 2.5rem;
-            letter-spacing: 1px;
-        }
+      @include respond(smaller-phone) {
+         font-size: 1.8rem;
+         letter-spacing: 0;
+      }
 
-        @include respond(smaller-phone) {
-            font-size: 1.8rem;
-            letter-spacing: 0;
-        }
-
-        @include respond(older-phone) {
-            font-size: 1.2rem;
-        }
-    }
+      @include respond(older-phone) {
+         font-size: 1.2rem;
+      }
+   }
 }
 
 // Secondary Heading
 .secondary-heading {
-    color: $color-black;
-    font-size: 3.5rem;
-    font-weight: 200;
-    text-transform: uppercase;
+   color: $color-black;
+   font-size: 3.5rem;
+   font-weight: 200;
+   text-transform: uppercase;
 
-    &::after {
-        background-color: $primary-color;
-        content: " ";
-        display: block;
-        margin: 0 auto;
-        margin-top: 1rem;
-        height: 2px;
-        width: 125px;
-    }
+   &::after {
+      background-color: $color-black-light;
+      border-radius: 2rem;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      margin-top: .6rem;
+      height: 2px;
+      width: 125px;
+   }
 }
 
 // Tertiary Heading
 .tertiary-heading {
-    color: $color-black;
-    font-size: 3rem;
-    font-weight: 100;
-}
-
-.sub-text {
-    color: $color-black;
-    font-size: 1.7rem;
-    line-height: 1.8;
-
-    &:not(:last-child) {
-        padding-bottom: 1rem;
-    }
+   color: $color-black;
+   font-size: 3rem;
+   font-weight: 100;
 }

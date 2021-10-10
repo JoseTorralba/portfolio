@@ -1,36 +1,18 @@
-// Section Default Styles
-section {
-    padding: 8rem 0;
-}
-
-.expertise-section {
-    background-color: $color-white;
-}
+section { padding: 6rem 0; }
+.expertise-section { background-color: $color-white; }
+.skills-section { background-color: $primary-color; }
+.project-section { background-color: #f4f4f4; }
+.contact-section { background-color: $primary-color; }
 
 .about-section {
-    background-image: linear-gradient(to bottom,
-            rgba($color-black, .5),
-            rgba($color-black, 1)),
-        url(../img/osa.jpg);
-        
-    background-attachment: fixed;
-    background-size: cover;
-    color: $color-white;
+   background-image: linear-gradient(to bottom,
+         rgba($color-black, .7),
+         rgba($color-black, .9)),
+      url(../img/osa.jpg);
+   background-attachment: fixed;
+   background-size: cover;
 
-    @include respond(tablet-portrait) {
-        background-attachment: scroll;
-    }
-}
-
-.skills-section {
-    background-color: $primary-color;
-}
-
-.project-section {
-    background-color: #f4f4f4;
-}
-
-.contact-section {
-    background-color: $primary-color;
-    padding: 4.5rem 0;
+   @include respond(tablet-portrait) {
+      background-attachment: scroll;
+   }
 }

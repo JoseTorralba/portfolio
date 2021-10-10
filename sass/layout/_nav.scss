@@ -1,216 +1,197 @@
 // Navigation
 .navigation {
 
-    &__background {
-        display: none;
+   &__background {
+      display: none;
 
-        @include respond(tablet-portrait) {
-            display: block;
+      @include respond(tablet-portrait) {
+         display: block;
+         animation-name: moveInRight;
+         animation-duration: .8s;
+         animation-timing-function: ease-in-out;
+         background-color: $primary-color;
+         border-radius: 50rem;
+         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+         width: 15rem;
+         height: 7rem;
+         position: fixed;
+         top: 5rem;
+         right: -5rem;
+         transition: all .5s;
+         z-index: 1000;
+
+         @include respond(smaller-phone) {
+            width: 13rem;
+            height: 7rem;
+         }
+
+         &--icon {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 3.5rem;
+            margin-top: 1.8rem;
+            margin-left: 2.2rem;
+         }
+      }
+   }
+
+   // Navbar Div
+   &__nav {
+      visibility: hidden;
+      opacity: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      position: fixed;
+      text-align: right;
+      width: 100%;
+      transition: all 0.3s;
+      z-index: 1000;
+
+      &--displayBackground {
+         visibility: visible;
+         background-color: $color-black-light;
+         opacity: 1;
+      }
+
+      @include respond(tablet-portrait) {
+         opacity: 1 !important;
+         visibility: visible;
+         float: right;
+         position: fixed;
+         left: 100%;
+         width: 100%;
+         height: 100vh;
+
+         background: #ECDDCE; 
+         background: -webkit-linear-gradient(to right, #fde8d4, #ECDDCE);
+         background: linear-gradient(to right, #fde8d4, #ECDDCE);
+
+
+         transition: all 0.3s;
+         z-index: 1000;
+      }
+   }
+
+   &__list {
+      transition: all .3s;
+
+      @include respond(tablet-portrait) {
+         padding: 0;
+         backface-visibility: hidden;
+         font-weight: 100;
+         list-style: none;
+         opacity: 0;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         text-transform: uppercase;
+         transform: translate(-50%, -50%);
+         transition: all .3s;
+         width: 100%;
+         z-index: 1000;
+
+         @include respond(smaller-phone) {
+            top: 44%;
+         }
+      }
+   }
+
+   &__item {
+      display: inline-block;
+      font-size: 1.8rem;
+      padding: 1rem 1.5rem;
+      transition: all .3s;
+
+      &:hover {
+         background-color: $primary-color-dark;
+      }
+
+      @include respond(tablet-portrait) {
+         display: block;
+         text-align: center;
+         font-size: 4rem;
+      }
+   }
+
+
+   &__item:hover > &__link {
+      color: black;
+   }
+
+   &__link {
+      &:link,
+      &:visited {
+         color: #fff;
+         text-decoration: none;
+         transition: all .3s;
+      }
+      &:hover,
+      &:active {
+         color: $primary-color;
+
+         @include respond(tablet-portrait) {
+            color: none;
+         }
+      }
+
+      @include respond(tablet-portrait) {
+         &:link,
+         &:visited {
+            color: $color-black-light;
+            display: inline-block;
+            font-size: 4rem;
+            text-decoration: none;
+            margin: 3rem 2rem;
+            transition: all .3s;
+         }
+      }
+   }
+
+   &__toggle {
+   display: none;
+
+      @include respond(tablet-portrait) {
+         display: block;
+         border-radius: 50rem;
+         color: $color-black-light;
+         width: 15rem;
+         height: 7rem;
+         position: fixed;
+         top: 5rem;
+         right: -5rem;
+         transition: all .5s;
+         z-index: 1500;
+
+         @include respond(smaller-phone) {
+            width: 13rem;
+         }
+
+         &--icon {
             animation-name: moveInRight;
             animation-duration: .8s;
             animation-timing-function: ease-in-out;
-            background-color: $primary-color;
-            border-radius: 50rem;
-            box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
-            color: $color-white;
-            width: 15rem;
-            height: 7rem;
-            position: fixed;
-            top: 5rem;
-            right: -5rem;
-            transition: all .5s;
-            z-index: 1000;
-    
-            @include respond(smaller-phone) {
-                width: 13rem;
-                height: 7rem;
-            }
-    
-            &--icon {
-                cursor: pointer;
-                display: inline-block;
-                font-size: 3.5rem;
-                margin-top: 1.8rem;
-                margin-left: 2.2rem;
-            }
-        }
-    }
+            cursor: pointer;
+            font-size: 3.5rem;
+            margin-top: 1.8rem;
+            margin-left: 2.2rem;
+            transition: all .2s;
+         }
+      }
+   }
 
-    // Navbar Div
-    &__nav {
-        position: fixed;
-        text-align: right;
-        width: 100%;
-        transition: all 0.3s;
-        z-index: 1000;
+   &__active {
+      display: block;
+      left: 0;
+      z-index: 1000;
+   }
 
+   &__active-nav {
+      display: block;
+      left: 0;
+   }
 
-        @include respond(tablet-portrait) {
-            float: right;
-            position: fixed;
-            left: 100%;
-            width: 100%;
-            height: 100vh;
-    
-            background-image: linear-gradient(
-                to bottom right,
-                rgba($primary-color-light, 1),
-                rgba(#481856, 1));
-    
-            transition: all 0.3s;
-            z-index: 1000;
-        }
-    }
-    
-    // Navbar - ul
-    &__list {
-        padding: 2rem;
-        transition: all .3s;
-
-        @include respond(tablet-portrait) {
-            padding: 0;
-
-            backface-visibility: hidden;
-            font-weight: 100;
-            list-style: none;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            text-transform: uppercase;
-            transform: translate(-50%, -50%);
-            transition: all .3s;
-            width: 100%;
-            z-index: 1000;
-    
-            @include respond(smaller-phone) {
-                top: 44%;
-            }
-        }
-    }
-
-    // Navbar - li
-    &__item {
-        display: inline-block;
-        font-size: 2rem;
-        &:not(:last-child) {
-            margin-right: 1.5rem;
-        }
-
-        @include respond(tablet-portrait) {
-            display: block;
-            text-align: center;
-            font-size: 4rem;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-        }
-    }
-
-    // Navbar Link - a
-    &__link {
-        &:link,
-        &:visited {
-            color: $color-white;
-            text-decoration: none;
-            transition: all .3s;
-        }
-
-        &:hover,
-        &:active {
-            color: $primary-color-text;
-            text-shadow: 0px 5px 10px rgb(15, 15, 15);
-
-            @include respond(tablet-portrait) {
-                color: none;
-            }
-        }
-
-        @include respond(tablet-portrait) {
-            &:link,
-            &:visited {
-                color: $color-white;
-                display: inline-block;
-                // font-size: 4rem;
-                text-decoration: none;
-                margin: 3rem 2rem;
-                transition: all .3s;
-            }
-    
-            &:hover,
-            &:active {
-                color: $primary-color-text;
-                text-shadow: 0px 5px 10px rgb(15, 15, 15);
-    
-                @include respond(tablet-portrait) {
-                    color: none;
-                }
-            }
-        }
-    }
-
-    &__toggle {
-        display: none;
-
-        @include respond(tablet-portrait) {
-            display: block;
-            border-radius: 50rem;
-            color: $color-white;
-            width: 15rem;
-            height: 7rem;
-            position: fixed;
-            top: 5rem;
-            right: -5rem;
-            transition: all .5s;
-            z-index: 1500;
-    
-            @include respond(smaller-phone) {
-                width: 13rem;
-            }
-    
-            &--icon {
-                animation-name: moveInRight;
-                animation-duration: .8s;
-                animation-timing-function: ease-in-out;
-                cursor: pointer;
-                font-size: 3.5rem;
-                margin-top: 1.8rem;
-                margin-left: 2.2rem;
-                text-shadow: 0px 3px 10px rgb(15, 15, 15);
-                transition: all .2s;
-    
-                &:hover {
-                    // color: $primary-color-text;
-                    // text-shadow: 0px 5px 10px rgb(15, 15, 15);
-                    // transform: translateY(-.1rem);
-                }
-    
-                // @include respond(tablet-portrait) {
-                 
-                //     color: $color-white !important;
-                //     transform: none;
-                // }
-            }
-        }
-    }
-
-
-    &__active {
-        display: block;
-        left: 0;
-        z-index: 1000;
-    }
-
-    // When Active for Nav, List
-    &__active-nav {
-        display: block;
-        left: 0;
-    }
-
-    &__active-list {
-        display: block;
-        opacity: 1 !important;
-        width: 100% !important;
-    }
+   &__active-list {
+      display: block;
+      opacity: 1 !important;
+      width: 100% !important;
+   }
 }

@@ -1,80 +1,58 @@
-// Expertise box
 .expertise-box {
-    background-color: rgba($color-white, .8);
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-    margin-top: 4rem;
-    padding: 0 2.2rem 3rem;
-    text-align: center;
-    transition: all .3s;
+   background-color: rgba($color-white, .8);
+   border-radius: 3px;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+   margin-top: 4rem;
+   padding: 0 2.2rem 3rem;
+   text-align: center;
+   transition: all .3s;
 
-    @include respond(tablet-portrait) {
-        margin-bottom: 3rem;
-    }
+   @include respond(tablet-portrait) {
+      margin-bottom: 3rem;
+   }
 
-    &:hover {
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .30);
-        transform: translateY(-.2rem);
-    }
+   &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   }
 
-    // Expertise Icon
-    &__icon {
-        position: relative;
-        background-color: $primary-color-light;
-        border-radius: 2rem;
-        color: #fff;
-        display: inline-block;
-        font-size: 5rem;
-        text-align: center;
-        text-shadow: 0px 2px 4px rgb(0, 0, 0);
-        height: 10rem;
-        width: 10rem;
-        top: -4.5rem;
+   &__icon {
+      background-color: $primary-color;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      border-radius: 2rem;
+      color: $color-black-light;
+      display: inline-block;
+      font-size: 5rem;
+      text-align: center;
 
-        &--1 {
-            position: absolute;
-            top: 2.4rem;
-            left: 1.8rem;
+      position: relative;
+      height: 10rem;
+      width: 10rem;
+      top: -4.5rem;
 
-            @include respond(tablet-portrait) {
-                left: 2.2rem;
-            }
-        }
+      &--1,
+      &--2,
+      &--3 {
+         position: absolute;
+         top: 2.4rem;
+      }
+      &--1 { left: 1.8rem; }
+      &--2 { left: 1.8rem; }
+      &--3 { left: 3.3rem; }
+   }
 
-        &--2 {
-            position: absolute;
-            top: 2.4rem;
-            left: 1.8rem;
-            @include respond(tablet-portrait) {
-                left: 2.2rem;
-            }
-        }
+   &__heading {
+      color: $color-black;
+      font-size: 2.5rem;
+      font-weight: 100;
+      margin-top: -2rem;
+      padding-bottom: 1.8rem;
+      text-align: center;
+   }
 
-        &--3 {
-            position: absolute;
-            top: 2.5rem;
-            left: 3.3rem;
-            @include respond(tablet-portrait) {
-                left: 3.5rem;
-            }
-        }
-    }
-
-    // Expertise heading
-    &__heading {
-        color: $color-black;
-        font-size: 2.5rem;
-        font-weight: 100;
-        margin-top: -2rem;
-        padding-bottom: 1.8rem;
-        text-align: center;
-    }
-
-    // Expertise text
-    &__text {
-        font-size: 1.6rem;
-        font-weight: 100;
-        line-height: 1.7;
-        text-align: left !important;
-    }
+   &__text {
+      font-size: 1.6rem;
+      font-weight: 100;
+      line-height: 1.7;
+      text-align: left !important;
+   }
 }

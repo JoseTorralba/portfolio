@@ -1,33 +1,30 @@
 // About 
 .about {
-    margin: 0 auto;
-    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+   color: #fff;
+   margin: 0 auto;
+   max-width: 55rem;
+   @include respond(tablet-portrait) { width: 100% !important; }
 
-    @include respond(tablet-portrait) {
-        width: 100% !important;
-    }
+   &__img {
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+      display: block;
+      padding: 1rem;
+      margin: 0 auto;
+      width: 100%;
+      transition: all .3s;
 
-    &__img {
-        background-color: #fff;
-        border-radius: 3px;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-        display: block;
-        padding: 1rem;
-        margin: 0 auto;
-        width: 100%;
-        transition: all .3s;
+      @include respond(tablet-portrait) { width: 50%; }
+      @include respond(phone) { width: 80%; }
+   }
 
-        @include respond(tablet-portrait) { width: 50%; }
-        @include respond(phone) { width: 80%; }
-    }
+   &__text {
+      font-size: 1.6rem;
+      line-height: 1.8;
 
-    // About Text
-    &__text {
-        font-size: 1.6rem;
-        line-height: 1.8;
-
-        &:not(:last-child) {
-            padding-bottom: 2rem;
-        }
-    }
+      &:not(:last-child) {
+         padding-bottom: 2rem;
+      }
+   }
 }

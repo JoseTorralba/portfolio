@@ -1,30 +1,15 @@
-// Centers Text
-.text-center {
-    text-align: center;
-}
-
 // White Text
 .white-text {
-    color: $color-white !important;
+   color: $color-white !important; 
+   &::after { background-color: $primary-color !important; }
 }
+
+// Centers Text
+.text-center { text-align: center; }
 
 // Margins
-.margin-top-small {
-    margin-top: 2rem;
-}
-
-.margin-top-medium {
-    margin-top: 4rem;
-}
-
-.margin-bottom-small {
-    margin-bottom: 2rem;
-}
-
-.margin-bottom-medium {
-    margin-bottom: 4rem;
-}
-
-.margin-bottom-big {
-    margin-bottom: 6rem;
-}
+.margin-top-small { margin-top: 2rem; }
+.margin-top-medium { margin-top: 4rem; }
+.margin-bottom-small { margin-bottom: 2rem; }
+.margin-bottom-medium { margin-bottom: 4rem; }
+.margin-bottom-big { margin-bottom: 6rem; }

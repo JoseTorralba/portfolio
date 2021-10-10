@@ -1,26 +1,22 @@
 // Footer
 .footer {
-    background-color: #000;
-    color: $color-white;
-    padding: 3rem;
-    text-align: center;
+   background-color: #000;
+   color: $color-white;
+   padding: 3rem;
+   text-align: center;
 
-    // Footer Text
-    &__text {
-        font-size: 1.4rem;
+   &__text {
+      font-size: 1.4rem;
+      @include respond(older-phone) { font-size: 1.2rem; }
 
-        @include respond(older-phone) {
-            font-size: 1.2rem;
-        }
+      &-link {
+         color: $primary-color-dark;
+         text-decoration: none;
+         transition: all .3s;
 
-        &-link {
-            color: $primary-color-text;
-            text-decoration: none;
-            transition: all .3s;
-
-            &:hover {
-                color: $primary-color-light;
-            }
-        }
-    }
+         &:hover {
+            color: $primary-color-light;
+         }
+      }
+   }
 }

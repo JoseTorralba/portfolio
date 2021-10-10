@@ -1,15 +1,15 @@
 // Document on Ready
 document.addEventListener('DOMContentLoaded', function() {
 
-    // NAVIGATION OBJECT & VARIABLES
-    var toggleItem = document.querySelectorAll('.navigation__item');
-    var navigation = {
-        div: document.querySelector('.navigation'),
-        nav: document.querySelector('.navigation__nav'),
-        list: document.querySelector('.navigation__list'),
-        background: document.querySelector('.navigation__background'),
-        icon: document.querySelector('.navigation__toggle--icon')
-    };
+   // NAVIGATION OBJECT & VARIABLES
+   let toggleLink = document.querySelectorAll('.navigation__link');
+   let navigation = {
+      div: document.querySelector('.navigation'),
+      nav: document.querySelector('.navigation__nav'),
+      list: document.querySelector('.navigation__list'),
+      background: document.querySelector('.navigation__background'),
+      icon: document.querySelector('.navigation__toggle--icon')
+   };
 
 
     // When Mobile Nav is Clicked
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
     // This needs to be worked on for mobile
-    toggleItem.forEach(function (toggleItem) {
+    toggleLink.forEach(function (toggleItem) {
         toggleItem.addEventListener('click', function() {
             navigation.nav.classList.remove('navigation__active');
             toggleNavIcon();
@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (navigation.icon.classList.contains('fa-bars')) {
             navigation.icon.setAttribute("class", "fas fa-times navigation__toggle--icon");
             navigation.icon.removeAttribute("fas fa-bars navigation__toggle--icon");
-
         } else {
             navigation.icon.setAttribute("class", "fas fa-bars navigation__toggle--icon");
             navigation.icon.removeAttribute('fas fa-times navigation__toggle--icon');
@@ -45,24 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
 
         // Navigation changes past header
-        var getNav = document.querySelector('.navigation__nav');
-        var getNavList = document.querySelector('.navigation__list');
-        
         if (window.pageYOffset > 700) {
-            getNav.style.backgroundColor = '#000';
-            getNavList.style.padding = '1rem 1.5rem';
-
+            navigation.nav.classList.add('navigation__nav--displayBackground');
         } else {
-            getNav.style.removeProperty("background-color");
-            getNavList.style.removeProperty("padding");
-
+            navigation.nav.classList.remove('navigation__nav--displayBackground');
         }
-
-        // Header Background on Scroll
-        const headerScroll = window.pageYOffset/2;
-        var getHeaderBackground = document.querySelector('.header');
-        getHeaderBackground.style.backgroundPositionY = headerScroll + 'px';
-
     });
 
 
