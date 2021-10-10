@@ -119,7 +119,7 @@ body {
 
 .secondary-heading {
   color: #000;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 200;
   text-transform: uppercase; }
   .secondary-heading::after {
@@ -128,9 +128,9 @@ body {
     content: " ";
     display: block;
     margin: 0 auto;
-    margin-top: .6rem;
+    margin-top: .4rem;
     height: 2px;
-    width: 125px; }
+    width: 100px; }
 
 .tertiary-heading {
   color: #000;
@@ -146,28 +146,31 @@ body {
   animation-name: moveInUp;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  background-color: #ECDDCE;
   border: none;
   border-radius: 3px;
-  color: #212121;
-  font-size: 1.7rem;
-  margin-top: 3rem;
   box-shadow: 0 1px 3px rgba(236, 221, 206, 0.12), 0 1px 2px rgba(236, 221, 206, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background-color: #ECDDCE;
-  padding: 1.2rem 3.5rem; }
+  color: #212121;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  padding: 1.2rem 3.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .btn--main:not(:last-child), .btn--secondary:not(:last-child) {
     margin-right: 3rem; }
   .btn--main:hover, .btn--secondary:hover {
     background-color: #ECDDCE;
     box-shadow: 0 3px 6px rgba(236, 221, 206, 0.16), 0 3px 6px rgba(236, 221, 206, 0.23);
     transform: translateY(-0.2rem); }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 37.5em) {
     .btn--main, .btn--secondary {
       background-color: #f5eee6;
-      padding: 1.3rem 2rem; } }
+      font-size: 1.3rem; } }
 
 .btn--secondary {
   font-size: 1.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .btn--secondary {
+      font-size: 1.3rem; } }
 
 .btn--project {
   background-color: #fff;
@@ -210,7 +213,7 @@ body {
     color: #212121;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     display: inline-block;
     font-size: 3.4rem;
     line-height: 60px;
@@ -221,7 +224,8 @@ body {
     .contact-box__link:not(:last-child) {
       margin-right: 2.5rem; }
     .contact-box__link:hover {
-      background: #ECDDCE; }
+      background: #ECDDCE;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22); }
 
 .expertise-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -249,14 +253,8 @@ body {
     width: 10rem;
     top: -4.5rem; }
     .expertise-box__icon--1, .expertise-box__icon--2, .expertise-box__icon--3 {
-      position: absolute;
-      top: 2.4rem; }
-    .expertise-box__icon--1 {
-      left: 1.8rem; }
-    .expertise-box__icon--2 {
-      left: 1.8rem; }
-    .expertise-box__icon--3 {
-      left: 3.3rem; }
+      position: relative;
+      top: 1.2rem; }
   .expertise-box__heading {
     color: #000;
     font-size: 2.5rem;
@@ -339,9 +337,8 @@ body {
   .skills-box__container {
     padding: 1.2rem 0; }
   .skills-box__icon {
-    color: #fff;
-    display: block;
-    font-size: 9rem; }
+    font-size: 9rem;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.12), 0 2px 1px rgba(0, 0, 0, 0.24); }
     @media only screen and (max-width: 25.875em) {
       .skills-box__icon {
         font-size: 8rem; } }
@@ -518,7 +515,7 @@ body {
   display: inline-block;
   font-size: 1.8rem;
   padding: 1rem 1.5rem;
-  transition: all .3s; }
+  transition: all .2s; }
   .navigation__item:hover {
     background-color: #e3ccb6; }
   @media only screen and (max-width: 56.25em) {
@@ -532,8 +529,7 @@ body {
 
 .navigation__link:link, .navigation__link:visited {
   color: #fff;
-  text-decoration: none;
-  transition: all .3s; }
+  text-decoration: none; }
 
 .navigation__link:hover, .navigation__link:active {
   color: #ECDDCE; }
