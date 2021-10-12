@@ -99,7 +99,7 @@ body {
       .primary-heading--main {
         font-size: 3rem; } }
   .primary-heading--sub {
-    color: #ECDDCE;
+    color: #e3ccb6;
     display: block;
     font-size: 3rem;
     font-weight: 300;
@@ -157,7 +157,7 @@ body {
   .btn--main:not(:last-child), .btn--secondary:not(:last-child) {
     margin-right: 3rem; }
   .btn--main:hover, .btn--secondary:hover {
-    background-color: #ECDDCE;
+    background-color: #e3ccb6;
     box-shadow: 0 3px 6px rgba(236, 221, 206, 0.16), 0 3px 6px rgba(236, 221, 206, 0.23);
     transform: translateY(-0.2rem); }
   @media only screen and (max-width: 37.5em) {
@@ -186,7 +186,7 @@ body {
     margin-right: 2rem; }
   .btn--project:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    background-color: #ECDDCE;
+    background-color: #f5eee6;
     transform: translateY(-0.2rem); }
 
 .contact-box {
@@ -223,7 +223,7 @@ body {
     .contact-box__link:not(:last-child) {
       margin-right: 2.5rem; }
     .contact-box__link:hover {
-      background: #ECDDCE;
+      background: #f5eee6;
       box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22); }
 
 .expertise-box {

@@ -7,13 +7,8 @@
    text-align: center;
    transition: all .3s;
 
-   @include respond(tablet-portrait) {
-      margin-bottom: 3rem;
-   }
-
-   &:hover {
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-   }
+   @include respond(tablet-portrait) { margin-bottom: 3rem; }
+   &:hover { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
 
    &__icon {
       background-color: $primary-color;
@@ -23,7 +18,6 @@
       display: inline-block;
       font-size: 5rem;
       text-align: center;
-
       position: relative;
       height: 10rem;
       width: 10rem;
@@ -34,11 +28,7 @@
       &--3 {
          position: relative;
          top: 1.2rem;
-         // left: 1.9rem;
       }
-      // &--1 { left: 1.8rem; }
-      // &--2 { left: 1.8rem; }
-      // &--3 { left: 3.3rem; }
    }
 
    &__heading {
