@@ -2,7 +2,7 @@
 .about {
    color: #fff;
    margin: 0 auto;
-   max-width: 55rem;
+   max-width: 50rem;
    @include respond(tablet-portrait) { width: 100% !important; }
 
    &__img {
@@ -26,5 +26,10 @@
       &:not(:last-child) {
          padding-bottom: 2rem;
       }
+   }
+
+   &__btn {
+      margin: 0 auto;
+      max-width: 50rem;
    }
 }

@@ -22,17 +22,9 @@ body {
       font-weight: 500;
       padding-bottom: .5rem;
 
-      @include respond(phone) {
-         font-size: 6.8rem;
-      }
-
-      @include respond(smaller-phone) {
-         font-size: 4.5rem;
-      }
-
-      @include respond(older-phone) {
-         font-size: 3rem;
-      }
+      @include respond(phone) { font-size: 5rem; }
+      @include respond(smaller-phone) { font-size: 4.5rem; }
+      @include respond(older-phone) { font-size: 3rem; }
    }
 
    &--sub {

@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <meta name="description" content="Jose Torralba is an aspiring front end developer and web designer based in New York City.">
+   <meta name="description" content="Jose Torralba is a front end web developer based in New York City.">
    <title>Jose Torralba | Portfolio</title>
    <!-- FONT -->
    <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
@@ -25,16 +25,16 @@
       <nav class="navigation__nav">
          <ul class="navigation__list">
             <li class="navigation__item">
-               <a href="#about" class="navigation__link scroll">About</a>
-            </li>
-            <li class="navigation__item">
-               <a href="#skills" class="navigation__link scroll">Skills</a>
-            </li>
-            <li class="navigation__item">
                <a href="#project" class="navigation__link scroll">Projects</a>
             </li>
             <li class="navigation__item">
-               <a href="#contact" class="navigation__link scroll">Contact</a>
+               <a href="#about" class="navigation__link scroll">About</a>
+            </li>
+            <li class="navigation__item">
+               <a href="#expertise" class="navigation__link scroll">Expertise</a>
+            </li>
+            <li class="navigation__item">
+               <a href="#skills" class="navigation__link scroll">Skills</a>
             </li>
          </ul>
       </nav>
@@ -52,14 +52,157 @@
             <span class="primary-heading--main">Jose Torralba</span>
             <span class="primary-heading--sub">Front end web developer</span>
          </h1>
-         <div class="margin-top-small">
+
+         <div>
             <a href="#project" class="btn btn--main scroll">Projects</a>
-            <a href="#about" class="btn btn--secondary scroll">About Me</a>
+            <a href="#about" class="btn btn--main scroll">About Me</a>
+         </div>
+
+         <div class="header__social">
+            <a href="mailto:josetorralba.1215@gmail.com" class="header__link header__link--1">
+               <i class="fas fa-envelope "></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jose-torralba/" target="_blank" class="header__link header__link--2">
+               <i class="fab fa-linkedin-in "></i>
+            </a>
+
+            <a href="https://github.com/JoseTorralba" target="_blank" class="header__link header__link--3">
+               <i class="fab fa-github "></i>
+            </a>
          </div>
       </div>
    </header>
 
-    <!-- Expertise Section -->
+   <!-- Project Section -->
+   <section class="project-section" id="project">
+      <div class="margin-bottom-big text-center">
+         <h2 class="secondary-heading">Projects</h2>
+      </div>
+      <div class="row row__grid">
+
+         <!-- Pokemon API -->
+         <div class="project-box">
+            <h3 class="project-box__heading">Pokemon API</h3>
+            <div class="project-box__img project-box__img--1">&nbsp;</div>
+            <div class="project-box__text">
+               <p>
+               Used the PokeAPI to allow user input and send back information on any Pokemon. Created with React.
+               </p>
+            </div>
+            <div>
+               <a href="https://pokemon-dex-api.netlify.app" target="_blank" class="btn btn--project">Live demo</a>
+               <a href="https://github.com/JoseTorralba/Pokemon-API" target="_blank" class="btn btn--project">View code</a>
+            </div>
+         </div>
+
+         <!-- MHW Monster List API -->
+         <div class="project-box">
+            <h3 class="project-box__heading">Monster Field Guide</h3>
+            <div class="project-box__img project-box__img--2">&nbsp;</div>
+            <div class="project-box__text">
+               <p>
+               Created a JSON file containing every monster in Monster Hunter World. Used Javascript to Fetch monster data.
+               </p>
+            </div>
+            <div>
+               <a href="https://torralbajose.com/MHW-Field-Guide/" target="_blank" class="btn btn--project">Live demo</a>
+               <a href="https://github.com/JoseTorralba/MHW-Field-Guide" target="_blank" class="btn btn--project">View code</a>
+            </div>
+         </div>
+
+         <!-- Carrier Crumbs -->
+         <div class="project-box">
+            <h3 class="project-box__heading">Carrier Crumbs</h3>
+            <div class="project-box__img project-box__img--4">&nbsp;</div>
+            <div class="project-box__text">
+               <p>
+               Designed and Developed this website for Carrier Crumbs, a Brooklyn based production company.
+               <!-- working to enhance the careers of up and coming artists. -->
+               </p>
+               </div>
+            <div>
+               <a href="http://carriercrumbs.com/" target="_blank" class="btn btn--project">Live demo</a>
+               <a href="https://github.com/carriercrumbs/CarrierCrumbs" target="_blank" class="btn btn--project">View code</a>
+            </div>
+         </div>
+
+         <!-- Final Fantasy 7 Remake Countdown -->
+         <div class="project-box">
+            <h3 class="project-box__heading">FFVII Countdown</h3>
+            <div class="project-box__img project-box__img--3">&nbsp;</div>
+            <div class="project-box__text">
+               <p>
+               Landing Page and Countdown to the release date of Final Fantasy VII Remake made with HTML, CSS/SASS and JS.
+               </p>
+            </div>
+            <div>
+               <a href="https://josetorralba.github.io/FFVIIR-Countdown/" target="_blank" class="btn btn--project">Live demo</a>
+               <a href="https://github.com/JoseTorralba/FFVIIR-Countdown" target="_blank" class="btn btn--project">View code</a>
+            </div>
+         </div>
+
+         <!-- Giphy API -->
+         <div class="project-box">
+            <h3 class="project-box__heading">Giphy API</h3>
+            <div class="project-box__img project-box__img--5">&nbsp;</div>
+            <div class="project-box__text">
+               <p>
+               Used the Giphy API to request and retrieve data. Worked in a team of 2 to complete this project.
+               </p>
+            </div>
+            <div>
+               <a href="https://josetorralba.github.io/Giphy-API/" target="_blank" class="btn btn--project">Live demo</a>
+               <a href="https://github.com/JoseTorralba/Giphy-API" target="_blank" class="btn btn--project">View code</a>
+            </div>
+         </div>
+
+         <!-- Bloodborne RPG -->
+         <div class="project-box">
+            <h3 class="project-box__heading">Bloodborne RPG</h3>
+            <div class="project-box__img project-box__img--6">&nbsp;</div>
+            <div class="project-box__text">
+               <p>
+               Used Vue.js to create a turn-based Role Playing Game with Bloodborne characters and references.
+               </p>
+            </div>
+            <div>
+               <a href="https://josetorralba.github.io/BloodborneRPG/" target="_blank" class="btn btn--project">Live demo</a>
+               <a href="https://github.com/JoseTorralba/BloodborneRPG" target="_blank" class="btn btn--project">View code</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- About Section -->
+   <section class="about-section" id="about">
+      <div class="text-center margin-bottom-medium">
+         <h2 class="secondary-heading white-text">About me</h2>
+      </div>
+      <div class="row">
+         <div class="about">
+            <p class="about__text">
+            My name's Jose Torralba, I'm a front end web developer from New York City.
+            </p>
+
+            <p class="about__text">
+            On my free time, I enjoy playing video games or go on long walks with my dogs to release the stress of an intense coding session.
+            </p>
+            <p class="about__text">
+            Feel free to view my resume or visit my github to view my repositories!
+            </p>
+         </div>
+
+         <div class="about__btn">
+            <a href="joset-resume.pdf" target="_blank" class="btn btn--secondary">Resume</a>
+            <a href="https://github.com/JoseTorralba" target="_blank" class="btn btn--secondary">Github</a>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- Expertise Section -->
    <section class="expertise-section" id="expertise">
       <div class="text-center margin-bottom-big">
          <h2 class="secondary-heading">My expertise</h2>
@@ -101,33 +244,7 @@
       </div>
    </section>
 
-   <!-- About Section -->
-   <section class="about-section" id="about">
-      <div class="text-center margin-bottom-medium">
-         <h2 class="secondary-heading white-text">About me</h2>
-      </div>
-      <div class="row">
-         <div class="about">
-            <p class="about__text">
-            My name's Jose Torralba, I'm an aspiring front end web developer from New York City.
-            </p>
-            <p class="about__text">
-            I'm currently learning React. As I'm learning, I'm implementing the things I learn onto old projects to get a better understanding of React.
-            </p>
-            <p class="about__text">
-            On my free time, I enjoy learning new things to further improve my coding and design skills and to implement
-            them on old projects. I also enjoy playing video games or go on long walks with my dogs to release the stress of an intense coding session.
-            </p>
-            <p class="about__text">
-            Interested in knowing more about what I do? Feel free to view my resume or visit my github to view my repositories!
-            </p>
-            <a href="josetorralba-resume.pdf" target="_blank" class="btn btn--secondary">Resume</a>
-            <a href="https://github.com/JoseTorralba" target="_blank" class="btn btn--secondary">Github</a>
-         </div>
-      </div>
-   </section>
-
-    <!-- SKILLS SECTIONS -->
+   <!-- SKILLS SECTIONS -->
    <section class="skills-section" id="skills">
       <div class="row">
          <div class="skills-box">
@@ -185,134 +302,6 @@
             </div>
          </div>
       </div>
-   </section>
-
-    <!-- Project Section -->
-   <section class="project-section" id="project">
-      <div class="margin-bottom-big text-center">
-         <h2 class="secondary-heading">Projects</h2>
-      </div>
-      <div class="row row__grid">
-
-         <!-- Pokemon API -->
-         <div class="project-box">
-            <h3 class="project-box__heading">Pokemon API</h3>
-            <div class="project-box__img project-box__img--1">&nbsp;</div>
-            <div class="project-box__text">
-               <p>
-               Used the PokeAPI to allow user input and send back information on any Pokemon. Created with React.
-               </p>
-            </div>
-            <div>
-               <a href="https://pokemon-dex-api.netlify.app" target="_blank" class="btn btn--project">Live demo</a>
-               <a href="https://github.com/JoseTorralba/Pokemon-API" target="_blank" class="btn btn--project">View code</a>
-            </div>
-         </div>
-
-         <!-- MHW Monster List API -->
-         <div class="project-box">
-            <h3 class="project-box__heading">Monster Field Guide</h3>
-            <div class="project-box__img project-box__img--2">&nbsp;</div>
-            <div class="project-box__text">
-               <p>
-               Created a JSON file containing every monster in Monster Hunter World. Used Javascript to Fetch monster data.
-               </p>
-            </div>
-            <div>
-               <a href="https://torralbajose.com/MHW-Field-Guide/" target="_blank" class="btn btn--project">Live demo</a>
-               <a href="https://github.com/JoseTorralba/MHW-Field-Guide" target="_blank" class="btn btn--project">View code</a>
-            </div>
-         </div>
-
-         <!-- Final Fantasy 7 Remake Countdown -->
-         <div class="project-box">
-            <h3 class="project-box__heading">FFVII Countdown</h3>
-            <div class="project-box__img project-box__img--3">&nbsp;</div>
-            <div class="project-box__text">
-               <p>
-               Landing Page and Countdown to the release date of Final Fantasy VII Remake made with HTML, CSS/SASS and JS.
-               </p>
-            </div>
-            <div>
-               <a href="https://josetorralba.github.io/FFVIIR-Countdown/" target="_blank" class="btn btn--project">Live demo</a>
-               <a href="https://github.com/JoseTorralba/FFVIIR-Countdown" target="_blank" class="btn btn--project">View code</a>
-            </div>
-         </div>
-
-         <!-- Carrier Crumbs -->
-         <div class="project-box">
-            <h3 class="project-box__heading">Carrier Crumbs</h3>
-            <div class="project-box__img project-box__img--4">&nbsp;</div>
-            <div class="project-box__text">
-               <p>
-               Designed and Developed this website for Carrier Crumbs, a Brooklyn based production company.
-               <!-- working to enhance the careers of up and coming artists. -->
-               </p>
-               </div>
-            <div>
-               <a href="http://carriercrumbs.com/" target="_blank" class="btn btn--project">Live demo</a>
-               <a href="https://github.com/carriercrumbs/CarrierCrumbs" target="_blank" class="btn btn--project">View code</a>
-            </div>
-         </div>
-
-         <!-- Giphy API -->
-         <div class="project-box">
-            <h3 class="project-box__heading">Giphy API</h3>
-            <div class="project-box__img project-box__img--5">&nbsp;</div>
-            <div class="project-box__text">
-               <p>
-               Used the Giphy API to request and retrieve data. Worked in a team of 2 to complete this project.
-               </p>
-            </div>
-            <div>
-               <a href="https://josetorralba.github.io/Giphy-API/" target="_blank" class="btn btn--project">Live demo</a>
-               <a href="https://github.com/JoseTorralba/Giphy-API" target="_blank" class="btn btn--project">View code</a>
-            </div>
-         </div>
-
-         <!-- Bloodborne RPG -->
-         <div class="project-box">
-            <h3 class="project-box__heading">Bloodborne RPG</h3>
-            <div class="project-box__img project-box__img--6">&nbsp;</div>
-            <div class="project-box__text">
-               <p>
-               Used Vue.js to create a turn-based Role Playing Game with Bloodborne characters and references.
-               </p>
-            </div>
-            <div>
-               <a href="https://josetorralba.github.io/BloodborneRPG/" target="_blank" class="btn btn--project">Live demo</a>
-               <a href="https://github.com/JoseTorralba/BloodborneRPG" target="_blank" class="btn btn--project">View code</a>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <!-- Contact Section -->
-   <section class="contact-section" id="contact">
-      <div class="row">
-         <div class="contact-box">
-            <div class="margin-bottom-small">
-               <h2 class="secondary-heading">Let's Work!</h2>
-            </div>
-            <p class="contact-box__text">Like my Portfolio and interested in working together?</p>
-            <p class="contact-box__text">Feel free to reach out to me with any of the links below and let's create something great together!</p>
-   
-            <div class="contact-box__social">
-               <a href="https://github.com/JoseTorralba" target="_blank" class="contact-box__link">
-                  <i class="fab fa-github"></i>
-               </a>
-   
-               <a href="https://www.linkedin.com/in/jose-torralba/" target="_blank" class="contact-box__link">
-                  <i class="fab fa-linkedin-in"></i>
-               </a>
-   
-               <a href="mailto:josetorralba.1215@gmail.com" class="contact-box__link">
-                  <i class="fas fa-envelope"></i>
-               </a>
-            </div>
-         </div>
-      </div>
-
    </section>
 
    <!-- Footer -->

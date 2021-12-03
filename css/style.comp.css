@@ -91,7 +91,7 @@ body {
     padding-bottom: .5rem; }
     @media only screen and (max-width: 37.5em) {
       .primary-heading--main {
-        font-size: 6.8rem; } }
+        font-size: 5rem; } }
     @media only screen and (max-width: 25.875em) {
       .primary-heading--main {
         font-size: 4.5rem; } }
@@ -142,17 +142,12 @@ body {
   text-transform: uppercase; }
 
 .btn--main, .btn--secondary {
-  animation-name: moveInUp;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
   background-color: #ECDDCE;
   border: none;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(236, 221, 206, 0.12), 0 1px 2px rgba(236, 221, 206, 0.24);
   color: #212121;
-  font-size: 1.5rem;
   margin-top: 3rem;
-  padding: 1.2rem 3.5rem;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .btn--main:not(:last-child), .btn--secondary:not(:last-child) {
     margin-right: 3rem; }
@@ -165,8 +160,19 @@ body {
       background-color: #f5eee6;
       font-size: 1.3rem; } }
 
+.btn--main {
+  animation-name: moveInUp;
+  animation-duration: .6s;
+  animation-timing-function: ease-in-out;
+  font-size: 1.5rem;
+  padding: 1rem 3.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .btn--main {
+      padding: .8rem 3.5rem; } }
+
 .btn--secondary {
-  font-size: 1.5rem; }
+  font-size: 1.3rem;
+  padding: .8rem 3.5rem; }
   @media only screen and (max-width: 37.5em) {
     .btn--secondary {
       font-size: 1.3rem; } }
@@ -188,43 +194,6 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: #f5eee6;
     transform: translateY(-0.2rem); }
-
-.contact-box {
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  line-height: 1.8;
-  padding: 3.5rem 0;
-  text-align: center; }
-  .contact-box__text {
-    font-size: 1.8rem;
-    font-weight: 900; }
-    .contact-box__text:not(:last-child) {
-      padding-bottom: 1rem; }
-    @media only screen and (max-width: 56.25em) {
-      .contact-box__text {
-        text-align: left;
-        padding: 0 4rem; } }
-  .contact-box__social {
-    display: inline-block;
-    margin-top: 2rem; }
-  .contact-box__link {
-    color: #212121;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    display: inline-block;
-    font-size: 3.4rem;
-    line-height: 60px;
-    text-decoration: none;
-    width: 60px;
-    height: 60px;
-    transition: all .3s; }
-    .contact-box__link:not(:last-child) {
-      margin-right: 2.5rem; }
-    .contact-box__link:hover {
-      background: #f5eee6;
-      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22); }
 
 .expertise-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -270,7 +239,7 @@ body {
 .project-box {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   color: #212121;
   padding: 0 0 3rem;
   text-align: center;
@@ -348,7 +317,7 @@ body {
 .about {
   color: #fff;
   margin: 0 auto;
-  max-width: 55rem; }
+  max-width: 50rem; }
   @media only screen and (max-width: 56.25em) {
     .about {
       width: 100% !important; } }
@@ -372,6 +341,9 @@ body {
     line-height: 1.8; }
     .about__text:not(:last-child) {
       padding-bottom: 2rem; }
+  .about__btn {
+    margin: 0 auto;
+    max-width: 50rem; }
 
 .footer {
   background-color: #000;
@@ -425,11 +397,36 @@ body {
       background-attachment: scroll; } }
   .header__text-box {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%; }
+  .header__social {
+    display: inline-block;
+    margin-top: 1.3rem; }
+  .header__link {
+    color: #ECDDCE;
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 60px;
+    text-decoration: none;
+    transition: all .2s; }
+    .header__link:not(:last-child) {
+      margin-top: 2.5rem;
+      margin-right: 4rem; }
+    .header__link:hover {
+      color: #f5eee6;
+      transform: translateY(-0.2rem); }
+    .header__link--1, .header__link--2, .header__link--3 {
+      animation-name: moveInUp;
+      animation-timing-function: ease-in-out; }
+    .header__link--1 {
+      animation-duration: .4s; }
+    .header__link--2 {
+      animation-duration: .6s; }
+    .header__link--3 {
+      animation-duration: .8s; }
 
 .navigation__background {
   display: none; }
@@ -597,7 +594,7 @@ section {
   background-color: #ECDDCE; }
 
 .project-section {
-  background-color: #f4f4f4; }
+  background-color: #fff; }
 
 .contact-section {
   background-color: #ECDDCE; }
@@ -605,6 +602,7 @@ section {
 .about-section {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(../img/osa.jpg);
   background-attachment: fixed;
+  background-position: top;
   background-size: cover; }
   @media only screen and (max-width: 56.25em) {
     .about-section {

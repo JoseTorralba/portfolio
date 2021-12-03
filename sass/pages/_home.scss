@@ -1,7 +1,7 @@
 section { padding: 6rem 0; }
 .expertise-section { background-color: $color-white; }
 .skills-section { background-color: $primary-color; }
-.project-section { background-color: #f4f4f4; }
+.project-section { background-color: $color-white; }
 .contact-section { background-color: $primary-color; }
 
 .about-section {
@@ -10,6 +10,7 @@ section { padding: 6rem 0; }
          rgba($color-black, .9)),
       url(../img/osa.jpg);
    background-attachment: fixed;
+   background-position: top;
    background-size: cover;
 
    @include respond(tablet-portrait) {

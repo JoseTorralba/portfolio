@@ -12,10 +12,45 @@
 
    &__text-box {
       position: absolute;
-      top: 45%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       width: 100%;
+   }
+
+   &__social {
+      display: inline-block;
+      margin-top: 1.3rem;
+   }
+
+   &__link {
+      color: $primary-color;
+      display: inline-block;
+      font-size: 3rem;
+      line-height: 60px;
+      text-decoration: none;
+      transition: all .2s;
+
+      &:not(:last-child) {
+         margin-top: 2.5rem;
+         margin-right: 4rem;
+      }
+
+      &:hover {
+         color: $primary-color-light;
+         transform: translateY(-.2rem);
+      }
+      
+      &--1,
+      &--2,
+      &--3 {
+         animation-name: moveInUp;
+         animation-timing-function: ease-in-out;
+      }
+
+      &--1 { animation-duration: .4s; }
+      &--2 { animation-duration: .6s; }
+      &--3 { animation-duration: .8s; }
    }
 }
