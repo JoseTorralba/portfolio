@@ -7,13 +7,15 @@ section { padding: 6rem 0; }
 .about-section {
    background-image: linear-gradient(to bottom,
          rgba($color-black, .7),
-         rgba($color-black, .9)),
+         rgba($color-black, .8)),
       url(../img/osa.jpg);
    background-attachment: fixed;
-   background-position: top;
+   background-position: center;
+   background-repeat: no-repeat;
    background-size: cover;
 
    @include respond(tablet-portrait) {
       background-attachment: scroll;
+      background-position: left;
    }
 }

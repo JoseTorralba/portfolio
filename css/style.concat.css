@@ -172,7 +172,7 @@ body {
 
 .btn--secondary {
   font-size: 1.3rem;
-  padding: .8rem 3.5rem; }
+  padding: .6rem 3.5rem; }
   @media only screen and (max-width: 37.5em) {
     .btn--secondary {
       font-size: 1.3rem; } }
@@ -256,17 +256,17 @@ body {
     background-size: cover;
     height: 20rem; }
     .project-box__img--1 {
-      background-image: url(../img/pokemon-api.jpg); }
+      background-image: url(../img/pokemon.jpg); }
     .project-box__img--2 {
-      background-image: url(../img/mh-field-guide.jpg); }
+      background-image: url(../img/monhun.jpg); }
     .project-box__img--3 {
       background-image: url(../img/ffviir.jpg); }
     .project-box__img--4 {
       background-image: url(../img/carriercrumbs.jpg); }
     .project-box__img--5 {
-      background-image: url(../img/giphy-api.jpg); }
+      background-image: url(../img/giphy.jpg); }
     .project-box__img--6 {
-      background-image: url(../img/bb-rpg.jpg); }
+      background-image: url(../img/rpg.jpg); }
     @media only screen and (max-width: 56.25em) {
       .project-box__img {
         height: 30rem; } }
@@ -320,30 +320,14 @@ body {
   max-width: 50rem; }
   @media only screen and (max-width: 56.25em) {
     .about {
-      width: 100% !important; } }
-  .about__img {
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    display: block;
-    padding: 1rem;
-    margin: 0 auto;
-    width: 100%;
-    transition: all .3s; }
-    @media only screen and (max-width: 56.25em) {
-      .about__img {
-        width: 50%; } }
-    @media only screen and (max-width: 37.5em) {
-      .about__img {
-        width: 80%; } }
-  .about__text {
+      max-width: 100% !important;
+      padding: 0 6rem; } }
+  .about__text p {
+    color: #fff;
     font-size: 1.6rem;
     line-height: 1.8; }
-    .about__text:not(:last-child) {
+    .about__text p:not(:last-child) {
       padding-bottom: 2rem; }
-  .about__btn {
-    margin: 0 auto;
-    max-width: 50rem; }
 
 .footer {
   background-color: #000;
@@ -394,7 +378,8 @@ body {
   height: 100vh; }
   @media only screen and (max-width: 56.25em) {
     .header {
-      background-attachment: scroll; } }
+      background-attachment: scroll;
+      background-position: right; } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -600,10 +585,12 @@ section {
   background-color: #ECDDCE; }
 
 .about-section {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(../img/osa.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/osa.jpg);
   background-attachment: fixed;
-  background-position: top;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover; }
   @media only screen and (max-width: 56.25em) {
     .about-section {
-      background-attachment: scroll; } }
+      background-attachment: scroll;
+      background-position: left; } }

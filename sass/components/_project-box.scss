@@ -21,12 +21,12 @@
       background-size: cover;
       height: 20rem;
 
-      &--1 { background-image: url(../img/pokemon-api.jpg); }
-      &--2 { background-image: url(../img/mh-field-guide.jpg); }
+      &--1 { background-image: url(../img/pokemon.jpg); }
+      &--2 { background-image: url(../img/monhun.jpg); }
       &--3 { background-image: url(../img/ffviir.jpg); }
       &--4 { background-image: url(../img/carriercrumbs.jpg); }
-      &--5 { background-image: url(../img/giphy-api.jpg); }
-      &--6 { background-image: url(../img/bb-rpg.jpg); }
+      &--5 { background-image: url(../img/giphy.jpg); }
+      &--6 { background-image: url(../img/rpg.jpg); }
 
       @include respond(tablet-portrait) { height: 30rem; }
       @include respond(smaller-phone) { height: 23rem; }
