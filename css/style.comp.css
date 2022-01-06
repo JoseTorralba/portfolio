@@ -303,9 +303,9 @@ body {
       .skills-box__grid {
         grid-template-columns: repeat(3, 1fr); } }
   .skills-box__container {
-    padding: 1.2rem 0; }
+    padding: 1.5rem 0; }
   .skills-box__icon {
-    font-size: 9rem;
+    font-size: 8rem;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.12), 0 2px 1px rgba(0, 0, 0, 0.24); }
     @media only screen and (max-width: 25.875em) {
       .skills-box__icon {
@@ -330,7 +330,7 @@ body {
       padding-bottom: 2rem; }
 
 .footer {
-  background-color: #000;
+  background-color: #212121;
   color: #fff;
   padding: 3rem;
   text-align: center; }
