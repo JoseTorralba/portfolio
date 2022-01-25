@@ -1,28 +1,7 @@
-.row {
-   max-width: $grid-width;
-   margin: 0 auto;
-
-   &:not(:last-child) {
-      margin-bottom: 8rem;
-
-      @include respond(tablet-portrait) {
-         margin-bottom: 6rem;
-      }
-   }
-   @include respond(tablet-portrait) {
-      max-width: 50rem;
-      padding: 0 3rem;
-   }
-
-   @include clearfix;
-
-   &__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 6rem;
-
-      @include respond(tablet-portrait) {
-         grid-template-columns: repeat(1, 1fr);
-      }
-   }
+.grid {
+   display: grid;
+   grid-template-rows: auto 100vh repeat(4, min-content);
+   grid-template-columns:
+      [full-start] minmax(auto, 1fr) 
+      [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 1fr [full-end]; 
 }

@@ -1,12 +1,11 @@
 body {
    color: $color-black-light;
-   font-family: 'Varela', sans-serif;
-   font-weight: 100;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
    line-height: 1.5;
    text-rendering: optimizeLegibility;
 }
 
-// Primary Heading
 .primary-heading {
    animation-name: fadeIn;
    animation-duration: 1s;
@@ -23,7 +22,7 @@ body {
       padding-bottom: .5rem;
 
       @include respond(phone) { font-size: 5rem; }
-      @include respond(smaller-phone) { font-size: 4.5rem; }
+      @include respond(smaller-phone) { font-size: 3.8rem; }
       @include respond(older-phone) { font-size: 3rem; }
    }
 
@@ -31,7 +30,7 @@ body {
       color: $primary-color-dark;
       display: block;
       font-size: 3rem;
-      font-weight: 300;
+      font-weight: 400;
       text-shadow: 0 .2rem .1rem rgba($primary-color, 0.50);
 
       @include respond(phone) {
@@ -45,16 +44,15 @@ body {
       }
 
       @include respond(older-phone) {
-         font-size: 1.2rem;
+         font-size: 1.6rem;
       }
    }
 }
 
-// Secondary Heading
 .secondary-heading {
-   color: $color-black;
+   color: $color-black-light;
    font-size: 3rem;
-   font-weight: 200;
+   font-weight: 500;
    text-transform: uppercase;
 
    &::after {
@@ -67,11 +65,4 @@ body {
       height: 2px;
       width: 100px;
    }
-}
-
-// Tertiary Heading
-.tertiary-heading {
-   color: $color-black;
-   font-size: 3rem;
-   font-weight: 100;
 }

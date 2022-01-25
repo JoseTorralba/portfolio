@@ -1,6 +1,5 @@
-// Navigation
+// Refactor entire nav...
 .navigation {
-
    &__background {
       display: none;
 
@@ -9,7 +8,7 @@
          animation-name: moveInRight;
          animation-duration: .8s;
          animation-timing-function: ease-in-out;
-         background-color: $primary-color;
+         background-color: $color-black-light;
          border-radius: 50rem;
          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
          width: 15rem;
@@ -35,10 +34,10 @@
       }
    }
 
-   // Navbar Div
    &__nav {
       visibility: hidden;
       opacity: 0;
+      background-color: $color-black-light;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       position: fixed;
       text-align: right;
@@ -53,20 +52,14 @@
       }
 
       @include respond(tablet-portrait) {
+         background-color: $color-black-light;
          opacity: 1 !important;
-         visibility: visible;
-         float: right;
          position: fixed;
          left: 100%;
          width: 100%;
          height: 100vh;
-
-         background: #ECDDCE; 
-         background: -webkit-linear-gradient(to right, #fde8d4, #ECDDCE);
-         background: linear-gradient(to right, #fde8d4, #ECDDCE);
-
-
          transition: all 0.3s;
+         visibility: visible;
          z-index: 1000;
       }
    }
@@ -135,7 +128,7 @@
       @include respond(tablet-portrait) {
          &:link,
          &:visited {
-            color: $color-black-light;
+            // color: $color-black-light;
             display: inline-block;
             font-size: 4rem;
             text-decoration: none;
@@ -151,7 +144,7 @@
       @include respond(tablet-portrait) {
          display: block;
          border-radius: 50rem;
-         color: $color-black-light;
+         color: $color-white;
          width: 15rem;
          height: 7rem;
          position: fixed;

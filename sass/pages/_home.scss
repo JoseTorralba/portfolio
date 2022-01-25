@@ -1,21 +1,8 @@
-section { padding: 6rem 0; }
-.expertise-section { background-color: $color-white; }
-.skills-section { background-color: $primary-color; }
-.project-section { background-color: $color-white; }
-.contact-section { background-color: $primary-color; }
+section { padding: 8rem 0; }
+.projects-section { grid-column: center-start / center-end; }
+.expertise-section { grid-column: center-start / center-end; }
 
-.about-section {
-   background-image: linear-gradient(to bottom,
-         rgba($color-black, .7),
-         rgba($color-black, .8)),
-      url(../img/osa.jpg);
-   background-attachment: fixed;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-
-   @include respond(tablet-portrait) {
-      background-attachment: scroll;
-      background-position: left;
-   }
+.skills-section {
+   background-color: $primary-color;
+   grid-column: full-start / full-end;
 }

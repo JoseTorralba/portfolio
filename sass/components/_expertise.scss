@@ -1,13 +1,18 @@
-.expertise-box {
+.expertises {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 6rem;
+   align-items: center;
+}
+
+.expertise {
    background-color: rgba($color-white, .8);
    border-radius: 3px;
    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+   display: grid;
    margin-top: 4rem;
    padding: 0 2.2rem 3rem;
-   text-align: center;
    transition: all .3s;
-
-   @include respond(tablet-portrait) { margin-bottom: 3rem; }
    &:hover { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
 
    &__icon {
@@ -15,35 +20,30 @@
       box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
       border-radius: 2rem;
       color: $color-black-light;
-      display: inline-block;
       font-size: 5rem;
-      text-align: center;
-      position: relative;
+      justify-self: center;
       height: 10rem;
       width: 10rem;
-      top: -4.5rem;
 
-      &--1,
-      &--2,
-      &--3 {
-         position: relative;
-         top: 1.2rem;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50%);
    }
 
    &__heading {
       color: $color-black;
+      font-weight: 500;
       font-size: 2.5rem;
-      font-weight: 100;
+      margin-bottom: 2rem;
       margin-top: -2rem;
-      padding-bottom: 1.8rem;
       text-align: center;
    }
 
    &__text {
       font-size: 1.6rem;
-      font-weight: 100;
       line-height: 1.7;
-      text-align: left !important;
+      display: flex;
+      align-items: center;
    }
 }

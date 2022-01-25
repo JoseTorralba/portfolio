@@ -5,14 +5,14 @@
 // BASE
 @import "base/animations";
 @import "base/base";
-@import "base/classes";
 @import "base/typography";
+@import "base/utilities";
 
 // COMPONENTS
 @import "components/button";
-@import "components/expertise-box";
-@import "components/project-box";
-@import "components/skills-box";
+@import "components/expertise";
+@import "components/project";
+@import "components/skills";
 
 // LAYOUT
 @import "layout/about";
