@@ -80,10 +80,6 @@
          transition: all .3s;
          width: 100%;
          z-index: 1000;
-
-         @include respond(smaller-phone) {
-            top: 44%;
-         }
       }
    }
 
@@ -100,7 +96,7 @@
       @include respond(tablet-portrait) {
          display: block;
          text-align: center;
-         font-size: 4rem;
+         font-size: 3rem;
       }
    }
 
@@ -129,10 +125,12 @@
          &:visited {
             // color: $color-black-light;
             display: inline-block;
-            font-size: 4rem;
+            font-size: 3rem;
             text-decoration: none;
-            margin: 3rem 2rem;
+            margin: 1.4rem 2rem;
             transition: all .3s;
+
+
          }
       }
    }

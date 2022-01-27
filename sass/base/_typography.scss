@@ -39,7 +39,7 @@ body {
       }
 
       @include respond(smaller-phone) {
-         font-size: 1.8rem;
+         font-size: 2rem;
          letter-spacing: 0;
       }
 
