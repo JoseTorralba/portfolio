@@ -29,24 +29,22 @@
          margin: 0 auto;
          width: 25rem;
       }
+      margin-top: 3rem;
    }
 
    &__btn .btn {
-      margin-top: 3rem;
       &:not(:last-child) {
          margin-right: 3rem;
-      }
-
-      @include respond(phone) {
-         &:not(:last-child) {
-            margin-right: 0;
+         @include respond(phone) {
+            &:not(:last-child) {
+               margin-right: 0;
+            }
          }
       }
    }
 
    &__social {
       display: inline-block;
-      margin-top: 1.3rem;
    }
 
    &__link {

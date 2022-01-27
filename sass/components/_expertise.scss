@@ -3,6 +3,10 @@
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap: 6rem;
    align-items: center;
+
+   @include respond(tablet-portrait) {
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+   }
 }
 
 .expertise {
@@ -41,7 +45,7 @@
    }
 
    &__text {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 1.7;
       display: flex;
       align-items: center;

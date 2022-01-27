@@ -1,4 +1,3 @@
-// Refactor entire nav...
 .navigation {
    &__background {
       display: none;
@@ -90,8 +89,8 @@
 
    &__item {
       display: inline-block;
-      font-size: 1.8rem;
-      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      padding: 1rem 1.2rem;
       transition: all .2s;
 
       &:hover {

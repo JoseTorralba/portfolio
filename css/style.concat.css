@@ -61,7 +61,7 @@ body {
   .primary-heading--main {
     color: #fff;
     display: block;
-    font-size: 8rem;
+    font-size: 6.5rem;
     font-weight: 500;
     padding-bottom: .5rem; }
     @media only screen and (max-width: 37.5em) {
@@ -164,6 +164,9 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 6rem;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .expertises {
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); } }
 
 .expertise {
   background-color: rgba(255, 255, 255, 0.8);
@@ -196,7 +199,7 @@ body {
     margin-top: -2rem;
     text-align: center; }
   .expertise__text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.7;
     display: flex;
     align-items: center; }
@@ -205,6 +208,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
 
 .project {
   color: #212121;
@@ -231,7 +237,7 @@ body {
     font-size: 1.4rem;
     padding: 3rem 2.5rem;
     display: flex;
-    align-items: center; }
+    flex-direction: column; }
   .project__btn {
     background-color: #363636;
     border: none;
@@ -275,7 +281,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   grid-column: full-start / col-end 3; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 37.5em) {
     .about__picture {
       display: none; } }
 
@@ -284,11 +290,15 @@ body {
   background-color: #363636;
   color: #fff;
   display: grid;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
   font-weight: 400;
   grid-column: col-start 4 / full-end;
   padding: 6rem 12rem; }
   @media only screen and (max-width: 56.25em) {
+    .about__content {
+      padding: 6rem; } }
+  @media only screen and (max-width: 37.5em) {
     .about__content {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/osa.jpeg);
       background-position: center;
@@ -352,22 +362,21 @@ body {
   .header__text-box {
     color: #fff;
     text-align: center; }
-  @media only screen and (max-width: 37.5em) {
-    .header__btn {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      margin: 0 auto;
-      width: 25rem; } }
-  .header__btn .btn {
+  .header__btn {
     margin-top: 3rem; }
-    .header__btn .btn:not(:last-child) {
-      margin-right: 3rem; }
     @media only screen and (max-width: 37.5em) {
-      .header__btn .btn:not(:last-child) {
+      .header__btn {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        width: 25rem; } }
+  .header__btn .btn:not(:last-child) {
+    margin-right: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__btn .btn:not(:last-child):not(:last-child) {
         margin-right: 0; } }
   .header__social {
-    display: inline-block;
-    margin-top: 1.3rem; }
+    display: inline-block; }
   .header__link {
     color: #ECDDCE;
     display: inline-block;
@@ -470,8 +479,8 @@ body {
 
 .navigation__item {
   display: inline-block;
-  font-size: 1.8rem;
-  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  padding: 1rem 1.2rem;
   transition: all .2s; }
   .navigation__item:hover {
     background-color: #e3ccb6; }

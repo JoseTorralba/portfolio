@@ -3,7 +3,7 @@
       @include addBackgroundImage(.1, .5);
       grid-column: full-start / col-end 3;
 
-      @include respond(tablet-portrait) { display: none; }
+      @include respond(phone) { display: none; }
    }
    
    &__content {
@@ -11,12 +11,18 @@
       background-color: $color-black-light;
       color: #fff;
       display: grid;
-      font-size: 1.5rem;
+      // font-size: 1.5rem;
+      font-size: 1.4rem;
+      line-height: 1.7;
       font-weight: 400;
       grid-column: col-start 4 / full-end;
       padding: 6rem 12rem;
 
       @include respond(tablet-portrait) {
+         padding: 6rem;
+      }
+
+      @include respond(phone) {
          @include addBackgroundImage(.8, .8);
          grid-column: 1 / -1;
          padding: 6rem 10rem;
