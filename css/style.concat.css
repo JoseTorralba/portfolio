@@ -228,7 +228,7 @@ body {
     font-size: 2.2rem;
     font-weight: 500;
     justify-self: center;
-    padding: 1.4rem .1rem;
+    padding: 1.4rem 0.1rem;
     text-align: center;
     width: 100%; }
   .project__img {
@@ -238,23 +238,32 @@ body {
     padding: 3rem 2.5rem;
     display: flex;
     flex-direction: column; }
+  .project__btns {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-between; }
   .project__btn {
-    background-color: #363636;
+    width: 100%;
     border: none;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
     color: #fff;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
     grid-column: 1 / -1;
     padding: 1.2rem 3rem;
-    transition: all .2s;
+    transition: all 0.2s;
     text-align: center;
     text-transform: uppercase; }
     .project__btn:hover {
       background-color: #e3ccb6;
       color: #363636; }
+    .project__btn--1 {
+      background-color: #363636;
+      border-bottom-left-radius: 3px; }
+    .project__btn--2 {
+      background-color: #242424;
+      border-bottom-right-radius: 3px; }
 
 .skills {
   background-color: #fff;
@@ -267,9 +276,13 @@ body {
   margin: 0 auto; }
   .skills__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0 1.4rem;
     text-align: center;
     padding: 0 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .skills__grid {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); } }
   .skills__container {
     padding: 1.8rem 2.2rem; }
   .skills__icon {
