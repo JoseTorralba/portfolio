@@ -13,6 +13,14 @@
     @include respond(tablet-portrait) {
       grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
+
+    @include respond(smaller-phone) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(older-phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__container {
