@@ -1,46 +1,59 @@
 @mixin addBackgroundImage($grad1, $grad2) {
-   background-image: linear-gradient(
+  background-image: linear-gradient(
       to bottom,
-      rgba($color-black, $grad1), 
-      rgba($color-black, $grad2)), 
-      url(../media/img/osa.jpeg);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
+      rgba($color-black, $grad1),
+      rgba($color-black, $grad2)
+    ),
+    url(../media/img/osa.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @mixin addContainer($bgColor) {
-    background-color: $bgColor;
-    border-radius: 4px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    line-height: 1.8;
-    padding: 3.5rem 0;
-    text-align: center;
+  background-color: $bgColor;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  line-height: 1.8;
+  padding: 3.5rem 0;
+  text-align: center;
 }
 
 // MEDIA QUERY MANAGER
 @mixin respond($breakpoint) {
-   @if $breakpoint==older-phone {
-      @media only screen and (max-width: 20em) { @content };
-   }
+  @if $breakpoint==older-phone {
+    @media only screen and (max-width: 20em) {
+      @content;
+    }
+  }
 
-   @if $breakpoint==smaller-phone {
-      @media only screen and (max-width: 25.875em) { @content };
-   }
+  @if $breakpoint==smaller-phone {
+    @media only screen and (max-width: 25.875em) {
+      @content;
+    }
+  }
 
-   @if $breakpoint==phone {
-      @media only screen and (max-width: 37.5em) { @content };
-   }
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
 
-   @if $breakpoint==tablet-portrait {
-      @media only screen and (max-width: 56.25em) { @content };
-   }
+  @if $breakpoint==tablet-portrait {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
 
-   @if $breakpoint==tablet-landscape {
-      @media only screen and (max-width: 75em) { @content };
-   }
+  @if $breakpoint==tablet-landscape {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
 
-   @if $breakpoint==big-desktop {
-      @media only screen and (min-width: 112.5em) { @content };
-   }
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
 }

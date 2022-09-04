@@ -1,8 +1,9 @@
-section { padding: 8rem 0; }
-.projects-section { grid-column: center-start / center-end; }
-.expertise-section { grid-column: center-start / center-end; }
-
+section {
+  padding: 8rem 0;
+}
+.projects-section {
+  grid-column: center-start / center-end;
+}
 .skills-section {
-   background-color: $primary-color;
-   grid-column: full-start / full-end;
+  grid-column: full-start / full-end;
 }
