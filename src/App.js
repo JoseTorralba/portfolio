@@ -1,11 +1,18 @@
 import Header from './components/Header';
-import './App.css';
+import Projects from './components/Projects';
+import { Grid } from './components/styles/Grid.styled';
 
+import GlobalStyles from './components/styles/Global';
 function App() {
   return (
-    <div className='App'>
-      <Header />
-    </div>
+    <>
+      <GlobalStyles />
+
+      <Grid>
+        <Header />
+        <Projects />
+      </Grid>
+    </>
   );
 }
 
