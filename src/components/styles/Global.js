@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   --white: #fff;
   --black: #000;
   --grey: #808080;
+  --light-grey: #363636;
   --washed: #f2f4f8;
 }
 
@@ -26,10 +27,14 @@ html {
 }
 
 body {
+  background: #f2f4f8;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+   line-height: 1.4;
+   text-rendering: optimizeLegibility;
 }
 `;
 
