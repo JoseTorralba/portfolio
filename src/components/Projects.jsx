@@ -68,8 +68,10 @@ const Projects = () => {
   );
 
   return (
-    <ProjectsSection>
-      <SecondaryHeading centered='center'>Projects</SecondaryHeading>
+    <ProjectsSection id='projects'>
+      <SecondaryHeading centered='center' mb='6rem'>
+        Projects
+      </SecondaryHeading>
 
       <ProjectsList>
         {projects.map((project, i) => (
