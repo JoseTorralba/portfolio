@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 import { Grid } from './components/styles/Grid.styled';
 
 import GlobalStyles from './components/styles/Global';
@@ -15,6 +16,7 @@ function App() {
         <Projects />
         <AboutImage />
         <About />
+        <Footer />
       </Grid>
     </>
   );
