@@ -27,7 +27,7 @@ import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
 const Skills = () => {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.5 });
   const animation = useAnimation();
 
   useEffect(() => {
@@ -35,11 +35,6 @@ const Skills = () => {
       animation.start({
         opacity: 1,
         scale: 1,
-        transition: {
-          type: 'spring',
-          duration: 0.6,
-          bounce: 0.2,
-        },
       });
     }
   }, [inView, animation]);
@@ -50,7 +45,7 @@ const Skills = () => {
         <h2>Technical Skills</h2>
         <SkillsList
           animate={animation}
-          initial={{ scale: 0.5, opacity: 0 }}
+          initial={{ scale: 0.8, opacity: 0 }}
           ref={ref}
         >
           <div>

@@ -21,6 +21,10 @@ export const SkillsSection = styled.div`
 export const SkillsContainer = styled(motion.div)`
   max-width: 114rem;
   margin: 0 auto;
+
+  @media only screen and (max-width: 75em) {
+    padding: 0 2%;
+  }
 `;
 
 export const SkillsList = styled(motion.div)`

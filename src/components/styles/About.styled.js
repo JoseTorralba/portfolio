@@ -72,5 +72,22 @@ export const AboutButtons = styled.div`
     &:not(:last-child) {
       margin-right: 3.5rem;
     }
+
+    @media only screen and (max-width: 25.875em) {
+      padding: 1rem 3rem;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    @media only screen and (max-width: 20em) {
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
   }
 `;

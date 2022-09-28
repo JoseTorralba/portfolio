@@ -32,7 +32,15 @@ export const PrimaryHeading = styled.span`
   text-align: center;
 
   @media only screen and (max-width: 56.25em) {
-    font-size: 2rem;
+    font-size: 7rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: 20em) {
+    font-size: 3.5rem;
   }
 `;
 
@@ -43,7 +51,15 @@ export const SubHeading = styled.span`
   text-align: center;
 
   @media only screen and (max-width: 56.25em) {
-    font-size: 2rem;
+    font-size: 3.5rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: 20em) {
+    font-size: 1.6rem;
   }
 `;
 

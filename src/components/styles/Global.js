@@ -23,9 +23,18 @@ const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
-    /* @include respond(tablet-landscape) { font-size: 56.25%; }
-    @include respond(tablet-portrait) { font-size: 50%; }
-    @include respond(big-desktop) { font-size: 75%; } */
+
+    @media only screen and (min-width: 112.5em) {
+      font-size: 75%;
+    }
+
+    @media only screen and (max-width: 75em) {
+      font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 50%;
+    }
   }
 
   body {

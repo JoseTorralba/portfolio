@@ -8,10 +8,10 @@ export const ProjectsSection = styled.div`
 
 export const ProjectsList = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
 
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 `;
