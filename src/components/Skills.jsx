@@ -40,7 +40,7 @@ const Skills = () => {
   }, [inView, animation]);
 
   return (
-    <SkillsSection>
+    <SkillsSection id='skills'>
       <SkillsContainer>
         <h2>Technical Skills</h2>
         <SkillsList

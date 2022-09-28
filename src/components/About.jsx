@@ -23,7 +23,12 @@ const About = () => {
   }, [inView, animation]);
 
   return (
-    <AboutSection animate={animation} initial={{ opacity: 0 }} ref={ref}>
+    <AboutSection
+      id='about'
+      animate={animation}
+      initial={{ opacity: 0 }}
+      ref={ref}
+    >
       <div>
         <h2>About Me</h2>
         <div>
