@@ -1,4 +1,8 @@
-import { SkillsSection, SkillsBox } from './styles/Skills.styled';
+import {
+  SkillsSection,
+  SkillsContainer,
+  SkillsList,
+} from './styles/Skills.styled';
 import { ReactComponent as HtmlIcon } from '../media/icons/html.svg';
 import { ReactComponent as CssIcon } from '../media/icons/css.svg';
 import { ReactComponent as JavascriptIcon } from '../media/icons/javascript.svg';
@@ -18,84 +22,128 @@ import { ReactComponent as NextIcon } from '../media/icons/next.svg';
 import { ReactComponent as MongoIcon } from '../media/icons/mongodb.svg';
 import { ReactComponent as FirebaseIcon } from '../media/icons/firebase.svg';
 
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
+
 const Skills = () => {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: 'spring',
+          duration: 0.6,
+          bounce: 0.2,
+        },
+      });
+    }
+  }, [inView, animation]);
+
   return (
     <SkillsSection>
-      <h2>The Tools I Use</h2>
-      <SkillsBox>
-        <div>
-          <HtmlIcon />
-          <p>HTML5</p>
-        </div>
-        <div>
-          <CssIcon />
-          <p>CSS3</p>
-        </div>
-        <div>
-          <JavascriptIcon />
-          <p>JavaScript</p>
-        </div>
-        <div>
-          <GithubIcon />
-          <p>Github</p>
-        </div>
-        <div>
-          <GitIcon />
-          <p>Git</p>
-        </div>
-        <div>
-          <VscodeIcon />
-          <p>VS Code</p>
-        </div>
-        <div>
-          <PhotoshopIcon />
-          <p>Photoshop</p>
-        </div>
-        <div>
-          <IllustratorIcon />
-          <p>Illustrator</p>
-        </div>
-        <div>
-          <BootstrapIcon />
-          <p>Bootstrap</p>
-        </div>
-        <div>
-          <SassIcon />
-          <p>SASS</p>
-        </div>
-        <div>
-          <JqueryIcon />
-          <p>jQuery</p>
-        </div>
-        <div>
-          <TailwindIcon />
-          <p>Tailwind CSS</p>
-        </div>
-        <div>
-          <NpmIcon />
-          <p>NPM</p>
-        </div>
-        <div>
-          <ReactIcon />
-          <p>React</p>
-        </div>
-        <div>
-          <ReduxIcon />
-          <p>Redux</p>
-        </div>
-        <div>
-          <NextIcon />
-          <p>Next.js</p>
-        </div>
-        <div>
-          <MongoIcon />
-          <p>MongoDB</p>
-        </div>
-        <div>
-          <FirebaseIcon />
-          <p>Firebase</p>
-        </div>
-      </SkillsBox>
+      <SkillsContainer>
+        <h2>Technical Skills</h2>
+        <SkillsList
+          animate={animation}
+          initial={{ scale: 0.5, opacity: 0 }}
+          ref={ref}
+        >
+          <div>
+            <HtmlIcon />
+            <p>HTML5</p>
+          </div>
+
+          <div>
+            <CssIcon />
+            <p>CSS3</p>
+          </div>
+
+          <div>
+            <JavascriptIcon />
+            <p>JavaScript</p>
+          </div>
+
+          <div>
+            <GithubIcon />
+            <p>Github</p>
+          </div>
+
+          <div>
+            <GitIcon />
+            <p>Git</p>
+          </div>
+
+          <div>
+            <VscodeIcon />
+            <p>VS Code</p>
+          </div>
+
+          <div>
+            <PhotoshopIcon />
+            <p>Photoshop</p>
+          </div>
+
+          <div>
+            <IllustratorIcon />
+            <p>Illustrator</p>
+          </div>
+
+          <div>
+            <BootstrapIcon />
+            <p>Bootstrap</p>
+          </div>
+
+          <div>
+            <SassIcon />
+            <p>SASS</p>
+          </div>
+
+          <div>
+            <JqueryIcon />
+            <p>jQuery</p>
+          </div>
+
+          <div>
+            <TailwindIcon />
+            <p>Tailwind CSS</p>
+          </div>
+
+          <div>
+            <NpmIcon />
+            <p>NPM</p>
+          </div>
+
+          <div>
+            <ReactIcon />
+            <p>React</p>
+          </div>
+
+          <div>
+            <ReduxIcon />
+            <p>Redux</p>
+          </div>
+
+          <div>
+            <NextIcon />
+            <p>Next.js</p>
+          </div>
+
+          <div>
+            <MongoIcon />
+            <p>MongoDB</p>
+          </div>
+
+          <div>
+            <FirebaseIcon />
+            <p>Firebase</p>
+          </div>
+        </SkillsList>
+      </SkillsContainer>
     </SkillsSection>
   );
 };

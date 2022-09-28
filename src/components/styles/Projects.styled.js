@@ -1,14 +1,19 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const ProjectsSection = styled.div`
   grid-column: center-start / center-end;
   padding: 6rem 0;
 `;
 
-export const ProjectsList = styled.div`
+export const ProjectsList = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 6rem;
+
+  @media only screen and (max-width: 56.25em) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
 `;
 
 export const ProjectItem = styled.div`

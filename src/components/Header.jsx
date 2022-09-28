@@ -1,31 +1,75 @@
-import Button from './Button';
+import { motion } from 'framer-motion';
+import { ReactComponent as GithubIcon } from '../media/icons/github.svg';
+import { ReactComponent as LinkedinIcon } from '../media/icons/linkedin.svg';
+import { ReactComponent as EmailIcon } from '../media/icons/email.svg';
 
 import {
   HeaderContainer,
   TextBox,
   PrimaryHeading,
   SubHeading,
-  ButtonContainer,
+  Button,
   Socials,
 } from './styles/Header.styled';
 
+import { Link } from 'react-scroll';
+
 const Header = () => {
+  const socialList = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+  const socialItem = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.8 },
+    },
+    hidden: { opacity: 0, x: -100 },
+  };
+
   return (
     <HeaderContainer>
       <TextBox>
-        <h1>
-          <PrimaryHeading>Jose Torralba</PrimaryHeading>
-          <SubHeading>Front-End Web Developer</SubHeading>
-        </h1>
+        <motion.div
+          initial={{
+            opacity: 0,
+            translateY: 100,
+          }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1>
+            <PrimaryHeading>Jose Torralba</PrimaryHeading>
+            <SubHeading>Front-End Web Developer</SubHeading>
+          </h1>
+        </motion.div>
 
-        <ButtonContainer>
-          <Button text={'Projects'} />
-        </ButtonContainer>
+        <Button
+          initial={{
+            opacity: 0,
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+        >
+          <Link to='projects' smooth={true} duration={1000}>
+            View Projects
+          </Link>
+        </Button>
 
-        <Socials>
-          <p>Email</p>
-          <p>LinkedIn</p>
-          <p>Github</p>
+        <Socials initial='hidden' animate='visible' variants={socialList}>
+          <motion.li variants={socialItem}>
+            <GithubIcon />
+          </motion.li>
+
+          <motion.li variants={socialItem}>
+            <LinkedinIcon />
+          </motion.li>
+
+          <motion.li variants={socialItem}>
+            <EmailIcon />
+          </motion.li>
         </Socials>
       </TextBox>
     </HeaderContainer>

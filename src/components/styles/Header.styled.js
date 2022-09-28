@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import backgroundImg from '../../media/header.jpg';
 
 export const HeaderContainer = styled.div`
   align-items: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9)
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
     ),
     url(${backgroundImg});
   background-size: cover;
@@ -29,6 +30,10 @@ export const PrimaryHeading = styled.span`
   display: block;
   font-size: 8rem;
   text-align: center;
+
+  @media only screen and (max-width: 56.25em) {
+    font-size: 2rem;
+  }
 `;
 
 export const SubHeading = styled.span`
@@ -36,18 +41,45 @@ export const SubHeading = styled.span`
   display: block;
   font-size: 4rem;
   text-align: center;
+
+  @media only screen and (max-width: 56.25em) {
+    font-size: 2rem;
+  }
 `;
 
-export const ButtonContainer = styled.div`
+export const Button = styled(motion.div)`
   padding: 4rem 0;
+
+  a {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.3rem;
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    padding: 1.2rem 4rem;
+  }
 `;
 
-export const Socials = styled.div`
+export const Socials = styled(motion.ul)`
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  p:not(:last-child) {
-    margin-right: 25px;
+  list-style: none;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    path {
+      fill: #fff;
+    }
+  }
+
+  li:not(:last-child) {
+    margin-right: 2rem;
   }
 `;

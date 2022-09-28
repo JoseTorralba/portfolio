@@ -1,16 +1,29 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const SkillsSection = styled.div`
-  background-color: var(--washed);
-  grid-column: center-start / center-end;
+  background-color: var(--primary-light);
+  grid-column: full-start / full-end;
   padding: 6rem 0;
   h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    color: var(--light-grey);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    h2 {
+      text-align: center;
+    }
   }
 `;
 
-export const SkillsBox = styled.div`
+export const SkillsContainer = styled(motion.div)`
+  max-width: 114rem;
+  margin: 0 auto;
+`;
+
+export const SkillsList = styled(motion.div)`
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 4rem 0;
@@ -24,12 +37,13 @@ export const SkillsBox = styled.div`
     text-align: center;
 
     svg {
+      filter: drop-shadow(0 2px 0.5px rgba(0, 0, 0, 0.4));
       margin-bottom: 0.5rem;
       width: 6.5rem;
       height: 6.5rem;
 
       path {
-        /* fill: var(--light-grey); */
+        /* fill: var(--primary); */
       }
     }
 
@@ -37,5 +51,17 @@ export const SkillsBox = styled.div`
       font-size: 1.5rem;
       font-weight: 700;
     }
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (max-width: 20em) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import {
   ProjectItem,
   ProjectsSection,
@@ -13,7 +13,23 @@ import taskApp from '../media/task.jpg';
 import turnBasedApp from '../media/rpg.jpg';
 import monsterHunter from '../media/monhun.jpg';
 
+// Animation
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
+
 const Projects = () => {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        duration: 1,
+      });
+    }
+  }, [inView, animation]);
+
   const projects = useMemo(
     () => [
       {
@@ -73,7 +89,7 @@ const Projects = () => {
         Projects
       </SecondaryHeading>
 
-      <ProjectsList>
+      <ProjectsList animate={animation} initial={{ opacity: 0 }} ref={ref}>
         {projects.map((project, i) => (
           <ProjectItem key={i}>
             <img src={project.thumbnail} alt='desc' />
