@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-import resume from '../media/jose-torralba-resume.pdf';
 import { AboutSection, AboutButtons } from './styles/About.styled';
-
-// Animation
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
+import resume from '../media/jose-torralba-resume.pdf';
 
 const About = () => {
   const { ref, inView } = useInView({ threshold: 0.4 });
@@ -14,10 +12,7 @@ const About = () => {
     if (inView) {
       animation.start({
         opacity: 1,
-
-        transition: {
-          duration: 0.4,
-        },
+        transition: { duration: 0.4 },
       });
     }
   }, [inView, animation]);

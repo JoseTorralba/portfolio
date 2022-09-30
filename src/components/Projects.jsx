@@ -13,7 +13,6 @@ import taskApp from '../media/task.jpg';
 import turnBasedApp from '../media/rpg.jpg';
 import monsterHunter from '../media/monhun.jpg';
 
-// Animation
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
@@ -95,7 +94,7 @@ const Projects = () => {
             <img src={project.thumbnail} alt='desc' />
 
             <ProjectText>
-              <h1>{project.name}</h1>
+              <h2>{project.name}</h2>
               <p>{project.description}</p>
             </ProjectText>
             <a href={project.link} target='_blank' rel='noopener noreferrer'>

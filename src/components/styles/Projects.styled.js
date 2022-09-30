@@ -17,8 +17,8 @@ export const ProjectsList = styled(motion.div)`
 `;
 
 export const ProjectItem = styled.div`
-  border-bottom-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
+  background-color: var(--accent);
+  border-radius: 0.3rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
 
@@ -38,7 +38,8 @@ export const ProjectItem = styled.div`
     width: 100%;
   }
   a {
-    background-color: var(--light-grey);
+    background-color: var(--project-btn);
+
     border: none;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
@@ -55,9 +56,11 @@ export const ProjectItem = styled.div`
 
 export const ProjectText = styled.div`
   padding: 3rem 3rem;
-  background-color: #fff;
+  color: var(--text);
+  /* background-color: var(--accent); */
 
-  h1 {
+  h2 {
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
   }

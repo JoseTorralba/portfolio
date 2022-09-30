@@ -1,41 +1,36 @@
 import { Link } from 'react-scroll';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NavContainer } from './styles/Navbar.styled';
 import { AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '../hooks/useScrollPosition';
 
 import { ReactComponent as SunIcon } from '../media/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../media/icons/moon.svg';
+import DarkModeContext from '../context/DarkModeContext';
 
 const Navbar = () => {
-  const [toggleNav, setToggleNav] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+  const { darkMode, themeHandler } = useContext(DarkModeContext);
   const scrollPosition = useScrollPosition();
 
   useEffect(() => {
-    if (scrollPosition >= 650) {
-      setToggleNav(true);
-    } else {
-      setToggleNav(false);
-    }
+    scrollPosition >= 650 ? setShowNav(true) : setShowNav(false);
   }, [scrollPosition]);
-
-  const darkModeHandler = prevState => setDarkMode(prevState => !prevState);
 
   return (
     <>
       <AnimatePresence>
-        {toggleNav && (
+        {showNav && (
           <NavContainer
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4 }}
             exit={{ y: -300, opacity: 0 }}
           >
-            {!darkMode ? (
-              <SunIcon onClick={darkModeHandler} />
+            {darkMode ? (
+              <SunIcon onClick={themeHandler} />
             ) : (
-              <MoonIcon onClick={darkModeHandler} />
+              <MoonIcon onClick={themeHandler} />
             )}
 
             <div>

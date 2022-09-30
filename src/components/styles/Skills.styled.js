@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const SkillsSection = styled.div`
-  background-color: var(--primary-light);
+  background-color: var(--skills-bg);
   grid-column: full-start / full-end;
   padding: 6rem 0;
+  transition: all 0.1s;
+
   h2 {
-    color: var(--light-grey);
+    color: var(--heading);
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
@@ -19,8 +21,8 @@ export const SkillsSection = styled.div`
 `;
 
 export const SkillsContainer = styled(motion.div)`
-  max-width: 114rem;
   margin: 0 auto;
+  max-width: 114rem;
 
   @media only screen and (max-width: 75em) {
     padding: 0 2%;
@@ -28,13 +30,15 @@ export const SkillsContainer = styled(motion.div)`
 `;
 
 export const SkillsList = styled(motion.div)`
-  background-color: #fff;
+  background-color: var(--skills-box);
+  border-radius: 2rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 4rem 0;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 4rem 0;
+  transition: all 0.1s;
 
   div {
     justify-content: center;
@@ -45,13 +49,10 @@ export const SkillsList = styled(motion.div)`
       margin-bottom: 0.5rem;
       width: 6.5rem;
       height: 6.5rem;
-
-      path {
-        /* fill: var(--primary); */
-      }
     }
 
     p {
+      color: var(--text);
       font-size: 1.5rem;
       font-weight: 700;
     }

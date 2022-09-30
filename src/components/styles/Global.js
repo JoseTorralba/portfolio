@@ -12,12 +12,45 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --primary: #e3ccb6;
     --primary-light: #FDF1E2;
-    --white: #fff;
-    --black: #000;
-    --grey: #808080;
-    --light-grey: #363636;
-    --washed: #f2f4f8;
 
+    --icon: #e3ccb6;
+
+    /* Button */
+    --main-btn: #e3ccb6;
+
+    /* Navbar */
+    --gray: #363636;
+
+    /* Headings */
+    --heading: #363636;
+    
+    /* Project */
+    --project-bg: #fff;
+    --accent: #fff;
+    --text: #363636;
+    --project-btn: #363636;
+
+    /* About */
+    --about-bg: #363636;
+
+    /* Skills */
+    --skills-bg: #FDF1E2;
+    --skills-box: #fff;
+  }
+
+  [data-theme='dark'] {
+    /* Headings */
+    --heading: #fff;
+
+    /* Project */
+    --project-bg: #222;
+    --accent: #363636;
+    --text: #fff;
+    --project-btn: #222;
+
+    /* Skills */
+    --skills-bg: #222;
+    --skills-box: #363636;
   }
 
   html {
@@ -37,8 +70,7 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  body {
-    background: #f2f4f8;
+  body {    
     font-family: 'Roboto', sans-serif;
     margin: 0;
     -webkit-font-smoothing: antialiased;

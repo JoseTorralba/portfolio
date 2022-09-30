@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const NavContainer = styled(motion.div)`
-  background-color: var(--light-grey);
+  background-color: var(--gray);
   color: #fff;
 
   font-size: 1.5rem;
@@ -27,7 +27,7 @@ export const NavContainer = styled(motion.div)`
     height: 2rem;
 
     path {
-      fill: var(--primary);
+      fill: var(--icon);
     }
 
     &:hover {

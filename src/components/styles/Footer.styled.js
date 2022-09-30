@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterStyles = styled.div`
-  background-color: var(--light-grey);
+  background-color: var(--gray);
   color: #fff;
   grid-column: full-start / full-end;
   font-size: 1.4rem;

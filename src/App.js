@@ -8,11 +8,18 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 
-import { AnimationProvider } from './context/AnimationContext';
+import { useContext } from 'react';
+import DarkModeContext from './context/DarkModeContext';
 
 function App() {
+  const { darkMode } = useContext(DarkModeContext);
+  console.log(darkMode);
+
+  const theme = darkMode ? 'dark' : 'light';
+
+  console.log(theme);
   return (
-    <AnimationProvider>
+    <div data-theme={theme}>
       <GlobalStyles />
       <Navbar />
       <Grid>
@@ -23,7 +30,7 @@ function App() {
         <Skills />
         <Footer />
       </Grid>
-    </AnimationProvider>
+    </div>
   );
 }
 

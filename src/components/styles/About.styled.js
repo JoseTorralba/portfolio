@@ -21,7 +21,7 @@ export const AboutImg = styled.div`
 
 export const AboutSection = styled(motion.div)`
   align-content: center;
-  background-color: var(--light-grey);
+  background-color: var(--about-bg);
   color: #fff;
   display: grid;
   font-size: 1.4rem;

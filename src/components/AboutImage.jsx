@@ -1,7 +1,5 @@
 import { AboutImg } from './styles/About.styled';
 
-const AboutImage = () => {
-  return <AboutImg>&nbsp;</AboutImg>;
-};
+const AboutImage = () => <AboutImg>&nbsp;</AboutImg>;
 
 export default AboutImage;
