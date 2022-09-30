@@ -19,16 +19,12 @@ export const HeaderContainer = styled.div`
 
   @media only screen and (max-width: 56.25em) {
     background-attachment: scroll;
-    background-position: right;
   }
 `;
 
 export const TextBox = styled.div`
   color: #fff;
   text-align: center;
-  &:not(:last-child) {
-    margin-bottom: 25px;
-  }
 `;
 
 export const PrimaryHeading = styled.span`

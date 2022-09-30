@@ -7,17 +7,13 @@ import AboutImage from './components/AboutImage';
 import About from './components/About';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
-
 import { useContext } from 'react';
 import DarkModeContext from './context/DarkModeContext';
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
-  console.log(darkMode);
-
   const theme = darkMode ? 'dark' : 'light';
 
-  console.log(theme);
   return (
     <div data-theme={theme}>
       <GlobalStyles />
