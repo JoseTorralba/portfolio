@@ -1,30 +1,29 @@
-import { useEffect } from 'react';
-import { AboutSection, AboutButtons } from './styles/About.styled';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import {
+  AboutSection,
+  AboutContent,
+  AboutButtons,
+} from './styles/About.styled';
+import { useAnimation, useInView } from 'framer-motion';
 import resume from '../media/jose-torralba-resume.pdf';
 
 const About = () => {
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const animation = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (isInView) {
       animation.start({
         opacity: 1,
         transition: { duration: 0.4 },
       });
     }
-  }, [inView, animation]);
+  }, [isInView, animation]);
 
   return (
-    <AboutSection
-      id='about'
-      animate={animation}
-      initial={{ opacity: 0 }}
-      ref={ref}
-    >
-      <div>
+    <AboutSection id='about'>
+      <AboutContent animate={animation} initial={{ opacity: 0 }} ref={ref}>
         <h2>About Me</h2>
         <div>
           <p>
@@ -49,7 +48,7 @@ const About = () => {
             Github
           </a>
         </AboutButtons>
-      </div>
+      </AboutContent>
     </AboutSection>
   );
 };

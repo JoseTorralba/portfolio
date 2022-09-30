@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import {
   SkillsSection,
   SkillsContainer,
@@ -21,23 +22,21 @@ import { ReactComponent as ReduxIcon } from '../media/icons/redux.svg';
 import { ReactComponent as NextIcon } from '../media/icons/next.svg';
 import { ReactComponent as MongoIcon } from '../media/icons/mongodb.svg';
 import { ReactComponent as FirebaseIcon } from '../media/icons/firebase.svg';
-
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
+import { useAnimation, useInView } from 'framer-motion';
 
 const Skills = () => {
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const animation = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (isInView) {
       animation.start({
         opacity: 1,
         scale: 1,
       });
     }
-  }, [inView, animation]);
+  }, [isInView, animation]);
 
   return (
     <SkillsSection id='skills'>

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Grid = styled.div`
-  /* color: red; */
   background-color: var(--project-bg);
   display: grid;
   grid-template-rows: 100vh repeat(4, min-content);

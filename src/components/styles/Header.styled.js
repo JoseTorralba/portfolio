@@ -4,6 +4,7 @@ import backgroundImg from '../../media/header.jpg';
 
 export const HeaderContainer = styled.div`
   align-items: center;
+  background-attachment: fixed;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.8),
@@ -64,27 +65,27 @@ export const SubHeading = styled.span`
 `;
 
 export const Button = styled(motion.div)`
-  padding: 4rem 0;
+  margin: 3rem 0;
 
   a {
+    display: inline-block;
     background-color: var(--primary);
     border: none;
     border-radius: 0.3rem;
     color: #000;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.4rem;
     text-decoration: none;
-    /* text-transform: uppercase; */
     padding: 1.2rem 4rem;
   }
 `;
 
 export const Socials = styled(motion.ul)`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   list-style: none;
 
   svg {

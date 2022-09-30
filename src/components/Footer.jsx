@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { FooterStyles } from './styles/Footer.styled';
 
 const Footer = () => {
@@ -5,7 +6,10 @@ const Footer = () => {
 
   return (
     <FooterStyles>
-      &copy; {currentYear} Designed & Developed by <a href='/'>Jose Torralba</a>
+      &copy; {currentYear} Designed & Developed by
+      <Link to='header' smooth={true} duration={1000}>
+        &nbsp;Jose Torralba
+      </Link>
     </FooterStyles>
   );
 };

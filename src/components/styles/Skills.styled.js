@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const SkillsSection = styled.div`
   background-color: var(--skills-bg);
   grid-column: full-start / full-end;
-  padding: 6rem 0;
+  padding: 8rem 0;
   transition: all 0.1s;
 
   h2 {

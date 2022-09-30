@@ -11,6 +11,7 @@ export const FooterStyles = styled.div`
 
   a {
     color: var(--primary);
+    cursor: pointer;
     text-decoration: none;
   }
 `;

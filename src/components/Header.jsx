@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <HeaderContainer>
+    <HeaderContainer id='header'>
       <TextBox>
         <motion.div
           initial={{
@@ -60,15 +60,33 @@ const Header = () => {
 
         <Socials initial='hidden' animate='visible' variants={socialList}>
           <motion.li variants={socialItem}>
-            <GithubIcon />
+            <a
+              href='https://github.com/JoseTorralba'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <GithubIcon />
+            </a>
           </motion.li>
 
           <motion.li variants={socialItem}>
-            <LinkedinIcon />
+            <a
+              href='https://www.linkedin.com/in/jose-torralba/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <LinkedinIcon />
+            </a>
           </motion.li>
 
           <motion.li variants={socialItem}>
-            <EmailIcon />
+            <a
+              href='mailto:jose.ttorralba@gmail.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <EmailIcon />
+            </a>
           </motion.li>
         </Socials>
       </TextBox>

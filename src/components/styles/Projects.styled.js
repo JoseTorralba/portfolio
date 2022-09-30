@@ -3,13 +3,20 @@ import { motion } from 'framer-motion';
 
 export const ProjectsSection = styled.div`
   grid-column: center-start / center-end;
-  padding: 6rem 0;
+  padding: 8em 0;
+
+  h2 {
+    color: var(--heading);
+    font-size: 3rem;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
 `;
 
 export const ProjectsList = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
+  grid-template-columns: repeat(3, 1fr);
 
   @media only screen and (max-width: 75em) {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -20,11 +27,10 @@ export const ProjectItem = styled.div`
   background-color: var(--accent);
   border-radius: 0.3rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   transition: all 0.2s;
 
   &:hover {
@@ -35,31 +41,30 @@ export const ProjectItem = styled.div`
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
     display: block;
+    user-select: none;
     width: 100%;
   }
   a {
     background-color: var(--project-btn);
-
     border: none;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
     color: #fff;
+    cursor: pointer;
+    display: block;
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     padding: 1.2rem 0;
-    display: block;
-    cursor: pointer;
   }
 `;
 
 export const ProjectText = styled.div`
-  padding: 3rem 3rem;
   color: var(--text);
-  /* background-color: var(--accent); */
+  padding: 3rem 3rem;
 
-  h2 {
+  h3 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;

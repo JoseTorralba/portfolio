@@ -14,41 +14,24 @@ const GlobalStyles = createGlobalStyle`
     --primary-light: #FDF1E2;
 
     --icon: #e3ccb6;
-
-    /* Button */
-    --main-btn: #e3ccb6;
-
-    /* Navbar */
     --gray: #363636;
-
-    /* Headings */
+    --main-btn: #e3ccb6;
     --heading: #363636;
-    
-    /* Project */
     --project-bg: #fff;
     --accent: #fff;
     --text: #363636;
     --project-btn: #363636;
-
-    /* About */
     --about-bg: #363636;
-
-    /* Skills */
     --skills-bg: #FDF1E2;
     --skills-box: #fff;
   }
 
   [data-theme='dark'] {
-    /* Headings */
     --heading: #fff;
-
-    /* Project */
     --project-bg: #222;
     --accent: #363636;
     --text: #fff;
     --project-btn: #222;
-
-    /* Skills */
     --skills-bg: #222;
     --skills-box: #363636;
   }
@@ -78,6 +61,11 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     line-height: 1.4;
     text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color : var(--primary);
+    color : #363636;
   }
 
 `;

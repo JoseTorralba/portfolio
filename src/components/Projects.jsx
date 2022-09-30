@@ -1,11 +1,11 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import {
   ProjectItem,
   ProjectsSection,
   ProjectsList,
   ProjectText,
 } from './styles/Projects.styled';
-import { SecondaryHeading } from './styles/Headings.styled';
+
 import petsagram from '../media/petsagram.png';
 import pokemonAPI from '../media/pokemon.jpg';
 import carrierCrumbs from '../media/carriercrumbs.jpg';
@@ -13,21 +13,21 @@ import taskApp from '../media/task.jpg';
 import turnBasedApp from '../media/rpg.jpg';
 import monsterHunter from '../media/monhun.jpg';
 
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
+import { useAnimation, useInView } from 'framer-motion';
 
 const Projects = () => {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const animation = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (isInView) {
       animation.start({
         opacity: 1,
         duration: 1,
       });
     }
-  }, [inView, animation]);
+  }, [isInView, animation]);
 
   const projects = useMemo(
     () => [
@@ -84,9 +84,7 @@ const Projects = () => {
 
   return (
     <ProjectsSection id='projects'>
-      <SecondaryHeading centered='center' mb='6rem'>
-        Projects
-      </SecondaryHeading>
+      <h2>Projects</h2>
 
       <ProjectsList animate={animation} initial={{ opacity: 0 }} ref={ref}>
         {projects.map((project, i) => (
@@ -94,7 +92,7 @@ const Projects = () => {
             <img src={project.thumbnail} alt='desc' />
 
             <ProjectText>
-              <h2>{project.name}</h2>
+              <h3>{project.name}</h3>
               <p>{project.description}</p>
             </ProjectText>
             <a href={project.link} target='_blank' rel='noopener noreferrer'>

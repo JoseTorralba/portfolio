@@ -1,12 +1,11 @@
-import { Link } from 'react-scroll';
 import { useContext, useEffect, useState } from 'react';
-import { NavContainer } from './styles/Navbar.styled';
+import { Link } from 'react-scroll';
 import { AnimatePresence } from 'framer-motion';
+import { NavContainer } from './styles/Navbar.styled';
 import { useScrollPosition } from '../hooks/useScrollPosition';
-
+import DarkModeContext from '../context/DarkModeContext';
 import { ReactComponent as SunIcon } from '../media/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../media/icons/moon.svg';
-import DarkModeContext from '../context/DarkModeContext';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);

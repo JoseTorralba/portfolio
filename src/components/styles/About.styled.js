@@ -9,6 +9,7 @@ export const AboutImg = styled.div`
       rgba(0, 0, 0, 0.4)
     ),
     url(${osa});
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,15 +20,15 @@ export const AboutImg = styled.div`
   }
 `;
 
-export const AboutSection = styled(motion.div)`
+export const AboutSection = styled.div`
   align-content: center;
   background-color: var(--about-bg);
   color: #fff;
   display: grid;
   font-size: 1.4rem;
-  line-height: 1.7;
   font-weight: 400;
   grid-column: col-start 4 / full-end;
+  line-height: 1.7;
   padding: 6rem 12rem;
 
   h2 {
@@ -39,42 +40,45 @@ export const AboutSection = styled(motion.div)`
     font-size: 1.6rem;
 
     &:not(:last-child) {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1rem;
     }
   }
 
   @media only screen and (max-width: 56.25em) {
     grid-column: 1 / -1;
-
     padding: 6rem 10%;
-    div {
-      max-width: 50rem;
-      margin: 0 auto;
-    }
+  }
+`;
+
+export const AboutContent = styled(motion.div)`
+  @media only screen and (max-width: 56.25em) {
+    max-width: 50rem;
+    margin: 0 auto;
   }
 `;
 
 export const AboutButtons = styled.div`
+  margin-top: 1.5rem;
   a {
     &:link,
     &:visited {
-      margin-top: 3rem;
       display: inline-block;
+      background-color: var(--primary);
+      border-radius: 0.3rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      color: #000;
+      display: inline-block;
+      padding: 0.6rem 4rem;
+      text-decoration: none;
     }
 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    text-decoration: none;
-    background-color: var(--primary);
-    border-radius: 0.3rem;
-    color: #000;
-    padding: 1rem 4rem;
-
     &:not(:last-child) {
-      margin-right: 3.5rem;
+      margin-right: 2.5rem;
     }
 
     @media only screen and (max-width: 25.875em) {
       padding: 1rem 3rem;
+
       &:not(:last-child) {
         margin-right: 2rem;
       }
@@ -87,6 +91,7 @@ export const AboutButtons = styled.div`
 
       &:not(:last-child) {
         margin-right: 0;
+        margin-bottom: 1.2rem;
       }
     }
   }
