@@ -7,8 +7,8 @@ export const HeaderContainer = styled.div`
   background-attachment: fixed;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
     ),
     url(${backgroundImg});
   background-size: cover;
@@ -16,6 +16,11 @@ export const HeaderContainer = styled.div`
   display: grid;
   color: #fff;
   grid-column: full-start / full-end;
+
+  @media only screen and (max-width: 56.25em) {
+    background-attachment: scroll;
+    background-position: right;
+  }
 `;
 
 export const TextBox = styled.div`
