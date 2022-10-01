@@ -6,10 +6,20 @@ const Footer = () => {
 
   return (
     <FooterStyles>
-      &copy; {currentYear} Designed & Developed by
-      <Link to='header' smooth={true} duration={1000}>
-        &nbsp;Jose Torralba
-      </Link>
+      <p>
+        &copy; {currentYear} Designed & Developed by
+        <Link to='header' smooth={true} duration={1000}>
+          &nbsp;Jose Torralba
+        </Link>
+      </p>
+
+      <a
+        href='https://github.com/JoseTorralba/portfolio'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        View Portfolio Source Code
+      </a>
     </FooterStyles>
   );
 };
