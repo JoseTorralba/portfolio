@@ -64,19 +64,19 @@ const Projects = () => {
       },
 
       {
-        name: 'Carrier Crumbs',
-        description:
-          'Designed and Developed this website for Carrier Crumbs, a Brooklyn based production company that works to enhance the careers of up and coming artists.',
-        thumbnail: carrierCrumbs,
-        link: 'https://torralbajose.com/',
-      },
-
-      {
         name: 'React Task List',
         description:
           'A task list app that takes user input and keeps track of their current task progress. Users can add, delete and edit tasks. Developed with React.',
         thumbnail: taskApp,
         link: 'https://react-tasklist-app.netlify.app/',
+      },
+
+      {
+        name: 'Carrier Crumbs',
+        description:
+          'Designed and Developed this website for Carrier Crumbs, a Brooklyn based production company that works to enhance the careers of up and coming artists.',
+        thumbnail: carrierCrumbs,
+        link: 'https://josetorralba.github.io/carriercrumbs/',
       },
     ],
     []

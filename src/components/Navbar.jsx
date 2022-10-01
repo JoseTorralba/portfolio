@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { AnimatePresence } from 'framer-motion';
-import { NavContainer } from './styles/Navbar.styled';
+import { NavContainer, DarkModeToggle } from './styles/Navbar.styled';
 import { useScrollPosition } from '../hooks/useScrollPosition';
 import DarkModeContext from '../context/DarkModeContext';
 import { ReactComponent as SunIcon } from '../media/icons/sun.svg';
@@ -26,11 +26,11 @@ const Navbar = () => {
             transition={{ duration: 0.4 }}
             exit={{ y: -300, opacity: 0 }}
           >
-            {darkMode ? (
-              <SunIcon onClick={themeHandler} />
-            ) : (
-              <MoonIcon onClick={themeHandler} />
-            )}
+            <div>
+              {!darkMode ? <SunIcon /> : <MoonIcon />}
+
+              <DarkModeToggle checked={darkMode} onClick={themeHandler} />
+            </div>
 
             <div>
               <Link to='projects' smooth={true} duration={1000}>
