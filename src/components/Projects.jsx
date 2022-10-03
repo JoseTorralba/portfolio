@@ -6,12 +6,12 @@ import {
   ProjectText,
 } from './styles/Projects.styled';
 
-import petsagram from '../media/petsagram.png';
-import pokemonAPI from '../media/pokemon.jpg';
-import carrierCrumbs from '../media/carriercrumbs.jpg';
-import taskApp from '../media/task.jpg';
-import turnBasedApp from '../media/rpg.jpg';
-import monsterHunter from '../media/monhun.jpg';
+import petsagram from '../media/images/petsagram.png';
+import pokemonAPI from '../media/images/pokemon.jpg';
+import carrierCrumbs from '../media/images/carriercrumbs.jpg';
+import taskApp from '../media/images/task.jpg';
+import turnBasedApp from '../media/images/rpg.jpg';
+import monsterHunter from '../media/images/monhun.jpg';
 
 import { useAnimation, useInView } from 'framer-motion';
 

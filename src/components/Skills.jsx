@@ -88,11 +88,6 @@ const Skills = () => {
           </div>
 
           <div>
-            <BootstrapIcon />
-            <p>Bootstrap</p>
-          </div>
-
-          <div>
             <SassIcon />
             <p>SASS</p>
           </div>
@@ -105,6 +100,11 @@ const Skills = () => {
           <div>
             <TailwindIcon />
             <p>Tailwind CSS</p>
+          </div>
+
+          <div>
+            <BootstrapIcon />
+            <p>Bootstrap</p>
           </div>
 
           <div>

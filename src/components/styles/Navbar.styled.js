@@ -43,6 +43,7 @@ export const NavContainer = styled(motion.div)`
 export const DarkModeToggle = styled.input.attrs(props => ({
   type: 'checkbox',
 }))`
+  cursor: pointer;
   position: relative;
   width: 3.5rem;
   height: 1.5rem;

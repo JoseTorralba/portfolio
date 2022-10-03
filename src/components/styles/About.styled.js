@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import osa from '../../media/test.jpeg';
+import osa from '../../media/images/osa.jpeg';
 
 export const AboutImg = styled.div`
   background-image: linear-gradient(
@@ -9,8 +9,7 @@ export const AboutImg = styled.div`
       rgba(0, 0, 0, 0.4)
     ),
     url(${osa});
-
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   grid-column: full-start / col-end 3;

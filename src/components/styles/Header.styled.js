@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import backgroundImg from '../../media/header.jpg';
+import backgroundImg from '../../media/images/header.jpg';
 
 export const HeaderContainer = styled.div`
   align-items: center;
@@ -18,7 +18,8 @@ export const HeaderContainer = styled.div`
   grid-column: full-start / full-end;
 
   @media only screen and (max-width: 56.25em) {
-    background-attachment: scroll;
+    background-attachment: initial;
+    background-position: right;
   }
 `;
 

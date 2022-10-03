@@ -29,7 +29,10 @@ const Navbar = () => {
             <div>
               {!darkMode ? <SunIcon /> : <MoonIcon />}
 
-              <DarkModeToggle checked={darkMode} onClick={themeHandler} />
+              <DarkModeToggle
+                defaultChecked={darkMode}
+                onClick={themeHandler}
+              />
             </div>
 
             <div>
