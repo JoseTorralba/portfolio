@@ -7,6 +7,7 @@ import {
 } from './styles/Projects.styled';
 
 import petsagram from '../media/images/petsagram.png';
+import gameReviews from '../media/images/gamereviews.jpg';
 import pokemonAPI from '../media/images/pokemon.jpg';
 import carrierCrumbs from '../media/images/carriercrumbs.jpg';
 import taskApp from '../media/images/task.jpg';
@@ -24,7 +25,6 @@ const Projects = () => {
     if (isInView) {
       animation.start({
         opacity: 1,
-        duration: 1,
       });
     }
   }, [isInView, animation]);
@@ -37,6 +37,14 @@ const Projects = () => {
           'Allows users to create an account and post pictures of their furry friends. Created with React and Firebase to successfully create users, sign them in and upload posts.',
         thumbnail: petsagram,
         link: 'https://petsagram.vercel.app/',
+      },
+
+      {
+        name: 'Video Game Reviews',
+        description:
+          'Allows users to search and interact with video game listings and rate them. Utilized React and the RAWG video game database API in order to display the data.',
+        thumbnail: gameReviews,
+        link: 'https://video-game-reviews.netlify.app/',
       },
 
       {

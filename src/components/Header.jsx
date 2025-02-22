@@ -53,7 +53,14 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
-          <Link to='projects' smooth={true} duration={1000}>
+          {/* Fix Offset */}
+          <Link
+            to='projects'
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={1000}
+          >
             View Projects
           </Link>
         </Button>

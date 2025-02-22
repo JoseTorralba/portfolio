@@ -8,5 +8,5 @@ export const Grid = styled.div`
     [full-start] minmax(auto, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
     [center-end] 1fr [full-end];
-  transition: all 0.1s;
+  /* transition: background-color 0.1s; */
 `;

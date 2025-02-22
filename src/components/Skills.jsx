@@ -8,6 +8,7 @@ import { ReactComponent as HtmlIcon } from '../media/icons/html.svg';
 import { ReactComponent as CssIcon } from '../media/icons/css.svg';
 import { ReactComponent as JavascriptIcon } from '../media/icons/javascript.svg';
 import { ReactComponent as GithubIcon } from '../media/icons/github.svg';
+import { ReactComponent as NetlifyIcon } from '../media/icons/netlify.svg';
 import { ReactComponent as GitIcon } from '../media/icons/git.svg';
 import { ReactComponent as VscodeIcon } from '../media/icons/vscode.svg';
 import { ReactComponent as PhotoshopIcon } from '../media/icons/photoshop.svg';
@@ -34,6 +35,7 @@ const Skills = () => {
       animation.start({
         opacity: 1,
         scale: 1,
+        transition: { duration: 0.3 },
       });
     }
   }, [isInView, animation]);
@@ -65,6 +67,11 @@ const Skills = () => {
           <div>
             <GithubIcon />
             <p>Github</p>
+          </div>
+
+          <div>
+            <NetlifyIcon />
+            <p>Netlify</p>
           </div>
 
           <div>

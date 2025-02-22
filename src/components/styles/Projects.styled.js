@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const ProjectsSection = styled.div`
+export const ProjectsSection = styled(motion.div)`
   grid-column: center-start / center-end;
-  padding: 8em 0;
+  padding: 6rem 0;
 
   h2 {
     color: var(--heading);
@@ -25,17 +25,12 @@ export const ProjectsList = styled(motion.div)`
 
 export const ProjectItem = styled.div`
   background-color: var(--accent);
-  border-radius: 0.3rem;
+  /* border-radius: 0.3rem; */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  transition: all 0.2s;
-
-  &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
+  justify-content: space-between; */
+  /* position: relative; */
 
   img {
     border-top-left-radius: 0.3rem;
@@ -47,8 +42,8 @@ export const ProjectItem = styled.div`
   a {
     background-color: var(--project-btn);
     border: none;
-    border-bottom-left-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
+    /* border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem; */
     color: #fff;
     cursor: pointer;
     display: block;

@@ -5,7 +5,6 @@ import {
   AboutButtons,
 } from './styles/About.styled';
 import { useAnimation, useInView } from 'framer-motion';
-import resume from '../media/jose-torralba-resume.pdf';
 
 const About = () => {
   const ref = useRef(null);
@@ -16,7 +15,7 @@ const About = () => {
     if (isInView) {
       animation.start({
         opacity: 1,
-        transition: { duration: 0.4 },
+        transition: { duration: 0.3 },
       });
     }
   }, [isInView, animation]);
@@ -29,23 +28,20 @@ const About = () => {
           <p>
             I'm Jose Torralba, a front end web developer from New York City.
             <br />
-            On my free time, I enjoy learning extreme and savage content in
-            Final Fantasy XIV or go on long walks with my dogs.
+            On my free time, I enjoy leveling in Final Fantasy XIV or go on long
+            walks with my dogs.
           </p>
 
-          <p>Feel free to view my resume or all of my repositories!</p>
+          <p>Feel free to view my repositories!</p>
         </div>
 
         <AboutButtons>
-          <a href={resume} target='_blank' rel='noopener noreferrer'>
-            Resume
-          </a>
           <a
             href='https://github.com/JoseTorralba'
             target='_blank'
             rel='noopener noreferrer'
           >
-            Github
+            View Repositories
           </a>
         </AboutButtons>
       </AboutContent>
